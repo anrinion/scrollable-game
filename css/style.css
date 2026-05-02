@@ -1,0 +1,180 @@
+/* ====================================================================
+   Swipe Game – Minimal Base Styles
+   Mobile-first: full-viewport snap container, gesture-friendly
+   ==================================================================== */
+
+/* ---- Reset & Root Setup ---- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden; /* prevent body scroll; game container handles scrolling */
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif;
+    background: #111;
+    color: #eee;
+    -webkit-tap-highlight-color: transparent; /* remove ugly tap highlight on mobile */
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* ---- Game Container (the scroll-snap canvas) ---- */
+.game-container {
+    position: fixed; /* keep it viewport-locked */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    overscroll-behavior: contain; /* stop pull-to-refresh & rubber-banding */
+    touch-action: pan-y; /* default: vertical swipes only */
+    -webkit-overflow-scrolling: touch;
+    background: #111;
+    /* Safe area padding (notches / dynamic island) */
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+        env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* Modifier for horizontal-swiping levels (toggled by JavaScript) */
+.game-container.horizontal {
+    touch-action: pan-x;
+    scroll-snap-type: x mandatory;
+}
+
+/* ---- Level Screen (each full-viewport page) ---- */
+.level-screen {
+    scroll-snap-align: start;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    /* Prevent images / elements from causing overflow */
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* ---- Content Styling (for dynamic content inside level-screen) ---- */
+.level-screen h1,
+.level-screen p {
+    max-width: 90vw;
+    word-break: break-word;
+}
+
+.level-screen button {
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: #eee;
+    color: #111;
+    cursor: pointer;
+    touch-action: manipulation; /* reduces tap delay */
+}
+
+/* ====================================================================
+   Dev Mode – Split‑screen Layout
+   ==================================================================== */
+body.dev-active {
+    display: flex;
+    flex-direction: row; /* game left, dev tools right */
+    height: 100vh;
+    overflow: hidden;
+}
+
+body.dev-active .game-container {
+    position: relative; /* remove fixed positioning in dev */
+    width: 50vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+/* Dev tools panel – right half */
+#dev-panel {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #1a1a2e;
+    border-left: 2px solid #333;
+    overflow: hidden;
+}
+
+.dev-header {
+    padding: 0.5rem;
+    background: #16213e;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.dev-header select,
+.dev-header button {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
+}
+
+.dev-header button {
+    background: #0f3460;
+    color: #e0e0e0;
+    border: 1px solid #533483;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dev-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+/* Visualizer graph area */
+#vis-network-container {
+    flex: 1;
+    border-bottom: 2px solid #333;
+    min-height: 200px;
+}
+
+/* JSON editor area */
+.json-editor {
+    flex: 0 0 45%; /* roughly half of the dev panel height */
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+}
+
+.json-editor-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0.5rem;
+    background: #111;
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
+.json-editor textarea {
+    flex: 1;
+    background: #0d0d1a;
+    color: #b0ffb0;
+    border: none;
+    padding: 0.5rem;
+    font-family: "Fira Code", monospace;
+    font-size: 0.75rem;
+    resize: none;
+    outline: none;
+}

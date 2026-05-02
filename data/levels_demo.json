@@ -1,0 +1,123 @@
+{
+  "levels": {
+    "level_01": {
+      "initial": "intro",
+      "nodes": {
+        "intro": {
+          "id": "intro",
+          "content": { "type": "text", "value": "👆 Swipe up to start" },
+          "transitions": [{ "event": "swipe_up", "target": "success" }]
+        },
+        "success": {
+          "id": "success",
+          "content": { "type": "text", "value": "✅ Perfect! Level complete" },
+          "transitions": [
+            { "event": "auto", "target": "level_02", "delay": 1500 }
+          ]
+        }
+      }
+    },
+    "level_02": {
+      "initial": "challenge",
+      "nodes": {
+        "challenge": {
+          "id": "challenge",
+          "content": { "type": "html", "value": "<h1>👇 Swipe DOWN</h1>" },
+          "transitions": [
+            { "event": "swipe_down", "target": "correct" },
+            { "event": "swipe_up", "target": "wrong" }
+          ]
+        },
+        "correct": {
+          "id": "correct",
+          "content": { "type": "text", "value": "⭐ Correct! Moving on…" },
+          "transitions": [
+            { "event": "auto", "target": "level_03", "delay": 1500 }
+          ]
+        },
+        "wrong": {
+          "id": "wrong",
+          "content": {
+            "type": "text",
+            "value": "❌ Wrong direction! Try again."
+          },
+          "transitions": [
+            { "event": "auto", "target": "challenge", "delay": 1500 }
+          ]
+        }
+      }
+    },
+    "level_03": {
+      "initial": "start",
+      "nodes": {
+        "start": {
+          "id": "start",
+          "content": { "type": "text", "value": "👈 Swipe LEFT" },
+          "transitions": [
+            { "event": "swipe_left", "target": "victory" },
+            { "event": "swipe_right", "target": "wrong_dir" }
+          ]
+        },
+        "victory": {
+          "id": "victory",
+          "content": { "type": "text", "value": "🏆 Left swipe success!" },
+          "transitions": [
+            { "event": "auto", "target": "level_04", "delay": 1500 }
+          ]
+        },
+        "wrong_dir": {
+          "id": "wrong_dir",
+          "content": { "type": "text", "value": "Not right — swipe LEFT!" },
+          "transitions": [{ "event": "auto", "target": "start", "delay": 1200 }]
+        }
+      }
+    },
+    "level_04": {
+      "initial": "gate",
+      "nodes": {
+        "gate": {
+          "id": "gate",
+          "content": { "type": "text", "value": "⬆️ ONLY swipe UP" },
+          "transitions": [
+            { "event": "swipe_up", "target": "pass" },
+            { "event": "swipe_down", "target": "blocked" },
+            { "event": "swipe_left", "target": "blocked" },
+            { "event": "swipe_right", "target": "blocked" }
+          ]
+        },
+        "pass": {
+          "id": "pass",
+          "content": { "type": "text", "value": "🎉 That's the one!" },
+          "transitions": [
+            { "event": "auto", "target": "level_05", "delay": 1500 }
+          ]
+        },
+        "blocked": {
+          "id": "blocked",
+          "content": { "type": "text", "value": "🚫 Only swipe UP works" },
+          "transitions": [{ "event": "auto", "target": "gate", "delay": 1000 }]
+        }
+      }
+    },
+    "level_05": {
+      "initial": "waiting",
+      "nodes": {
+        "waiting": {
+          "id": "waiting",
+          "content": {
+            "type": "html",
+            "value": "<div style='font-size:1.5em'>⏳ Auto‑advancing in 2s…</div>"
+          },
+          "transitions": [
+            { "event": "auto", "target": "finished", "delay": 2000 }
+          ]
+        },
+        "finished": {
+          "id": "finished",
+          "content": { "type": "text", "value": "👍 Done! No swipe needed." },
+          "transitions": []
+        }
+      }
+    }
+  }
+}
