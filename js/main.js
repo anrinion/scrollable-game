@@ -1,7 +1,14 @@
 (async () => {
   const container = document.getElementById("game-container");
 
-  const response = await fetch("data/levels_demo.json");
+  const params = new URLSearchParams(window.location.search);
+  const versionParam = params.get("version");
+  
+  // Whitelist acceptable versions
+  const validVersions = ["demo", "game"];
+  const version = validVersions.includes(versionParam) ? versionParam : "demo";
+
+  const response = await fetch(`data/levels_${version}.json`);
   const config = await response.json();
 
   const engine = new SwipeGameEngine(config, container);

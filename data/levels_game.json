@@ -1,0 +1,35 @@
+{
+  "levels": {
+    "level_01": {
+      "initial": "start",
+      "nodes": {
+        "start": {
+          "id": "start",
+          "content": {
+            "type": "text",
+            "value": "Welcome to the Game."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_02"
+            }
+          ]
+        }
+      }
+    },
+    "level_02": {
+      "initial": "intro",
+      "nodes": {
+        "intro": {
+          "id": "intro",
+          "content": {
+            "type": "text",
+            "value": "More levels coming soon..."
+          },
+          "transitions": []
+        }
+      }
+    }
+  }
+}
