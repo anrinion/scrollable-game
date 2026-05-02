@@ -31,8 +31,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     touch-action: none; /* Prevent all default browser scrolling/zooming */
     background: transparent;
@@ -54,8 +54,8 @@ body {
 /* ---- Level Screen (each full-viewport page) ---- */
 .level-screen {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

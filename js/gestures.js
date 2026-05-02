@@ -56,6 +56,7 @@ class GestureTracker {
     this._lastX = x;
     this._lastY = y;
     this._lastTime = Date.now();
+    this._startTime = this._lastTime;
     this._isDragging = true;
     this._lockedAxis = null;
     this._pointerId = pointerId;
@@ -106,24 +107,24 @@ class GestureTracker {
     const dx = this._lastX - this._startX;
     const dy = this._lastY - this._startY;
     
-    // Quick calculate recent velocity over last frame
-    const vX = (this._lastX - this._startX) / (Date.now() - this._lastTime + 1);
-    const vY = (this._lastY - this._startY) / (Date.now() - this._lastTime + 1);
+    // Overall velocity since start of gesture
+    const dt = Date.now() - this._startTime || 1;
+    const vX = Math.abs(dx) / dt;
+    const vY = Math.abs(dy) / dt;
 
-    // More robust velocity check would track history, but simple distance/velocity check works
     let direction = null;
     let committed = false;
 
     if (this._lockedAxis === 'x') {
       const frac = Math.abs(dx) / window.innerWidth;
-      // We check if distance > threshold OR velocity is high enough in the correct direction
-      if (frac > this.distanceThreshold) {
+      // Commit if dragged more than 20% or flicked fast enough
+      if (frac > 0.2 || vX > this.velocityThreshold) {
         committed = true;
       }
       direction = dx > 0 ? "swipe_right" : "swipe_left";
     } else {
       const frac = Math.abs(dy) / window.innerHeight;
-      if (frac > this.distanceThreshold) {
+      if (frac > 0.2 || vY > this.velocityThreshold) {
         committed = true;
       }
       direction = dy > 0 ? "swipe_down" : "swipe_up";

@@ -210,10 +210,10 @@ class SwipeGameEngine {
         if (trans.event === "auto" || renderedTargets.has(trans.target)) continue;
         
         let tx = 0, ty = 0;
-        if (trans.event === "swipe_up") ty = window.innerHeight; // target is below
-        else if (trans.event === "swipe_down") ty = -window.innerHeight; // target is above
-        else if (trans.event === "swipe_left") tx = window.innerWidth; // target is to the right
-        else if (trans.event === "swipe_right") tx = -window.innerWidth; // target is to the left
+        if (trans.event === "swipe_up") ty = this.container.clientHeight; // target is below
+        else if (trans.event === "swipe_down") ty = -this.container.clientHeight; // target is above
+        else if (trans.event === "swipe_left") tx = this.container.clientWidth; // target is to the right
+        else if (trans.event === "swipe_right") tx = -this.container.clientWidth; // target is to the left
         else continue;
 
         let targetLevelId = this.currentLevel.id;
@@ -278,10 +278,10 @@ class SwipeGameEngine {
   _snapAndTransition(direction) {
     this._isAnimating = true;
     let tx = 0, ty = 0;
-    if (direction === "swipe_up") ty = -window.innerHeight; // wrapper moves up
-    else if (direction === "swipe_down") ty = window.innerHeight;
-    else if (direction === "swipe_left") tx = -window.innerWidth;
-    else if (direction === "swipe_right") tx = window.innerWidth;
+    if (direction === "swipe_up") ty = -this.container.clientHeight; // wrapper moves up
+    else if (direction === "swipe_down") ty = this.container.clientHeight;
+    else if (direction === "swipe_left") tx = -this.container.clientWidth;
+    else if (direction === "swipe_right") tx = this.container.clientWidth;
 
     this.wrapper.style.transition = "transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
     this._translateX = tx;
@@ -318,10 +318,10 @@ class SwipeGameEngine {
         let tx = 0;
         let animate = false;
         
-        if (trans.event === "auto_swipe_up") { ty = -window.innerHeight; animate = true; }
-        else if (trans.event === "auto_swipe_down") { ty = window.innerHeight; animate = true; }
-        else if (trans.event === "auto_swipe_left") { tx = -window.innerWidth; animate = true; }
-        else if (trans.event === "auto_swipe_right") { tx = window.innerWidth; animate = true; }
+        if (trans.event === "auto_swipe_up") { ty = -this.container.clientHeight; animate = true; }
+        else if (trans.event === "auto_swipe_down") { ty = this.container.clientHeight; animate = true; }
+        else if (trans.event === "auto_swipe_left") { tx = -this.container.clientWidth; animate = true; }
+        else if (trans.event === "auto_swipe_right") { tx = this.container.clientWidth; animate = true; }
         
         if (animate) {
           this._isAnimating = true;

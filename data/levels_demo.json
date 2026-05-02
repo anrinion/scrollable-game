@@ -206,8 +206,14 @@
             "props": {
               "question": "What happens next?",
               "buttons": [
-                { "label": "Start Over", "event": "btn_reset" },
-                { "label": "Stay Here", "event": "btn_stay" }
+                {
+                  "label": "Start Over",
+                  "event": "btn_reset"
+                },
+                {
+                  "label": "Stay Here",
+                  "event": "btn_stay"
+                }
               ]
             }
           },
