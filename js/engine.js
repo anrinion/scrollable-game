@@ -88,6 +88,7 @@ class SwipeGameEngine {
 
     this._translateX = 0;
     this._translateY = 0;
+    this.wrapper.style.transition = "none";
     this._applyTransform();
 
     this._executeHook(this.nodes[this.currentState]?.onEnter);
