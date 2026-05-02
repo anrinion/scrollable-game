@@ -6,7 +6,26 @@
   
   // Whitelist acceptable versions
   const validVersions = ["demo", "game"];
-  const version = validVersions.includes(versionParam) ? versionParam : "demo";
+  
+  if (!validVersions.includes(versionParam)) {
+    // Show version selector menu
+    const menuEl = document.createElement("div");
+    menuEl.className = "level-screen";
+    
+    let html = `<h1 style="margin-bottom: 2rem;">Select Version</h1>`;
+    html += `<div style="display: flex; flex-direction: column; gap: 15px;">`;
+    validVersions.forEach(v => {
+      const isDev = params.get("dev") === "true" ? "&dev=true" : "";
+      html += `<button onclick="window.location.href='?version=${v}${isDev}'">Play ${v.toUpperCase()}</button>`;
+    });
+    html += `</div>`;
+    
+    menuEl.innerHTML = html;
+    container.appendChild(menuEl);
+    return; // Stop initialization
+  }
+
+  const version = versionParam;
 
   const response = await fetch(`data/levels_${version}.json`);
   const config = await response.json();
