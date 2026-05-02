@@ -26,33 +26,34 @@ body {
     user-select: none;
 }
 
-/* ---- Game Container (the scroll-snap canvas) ---- */
+/* ---- Game Container (viewport) ---- */
 .game-container {
-    position: fixed; /* keep it viewport-locked */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    overscroll-behavior: contain; /* stop pull-to-refresh & rubber-banding */
-    touch-action: pan-y; /* default: vertical swipes only */
-    -webkit-overflow-scrolling: touch;
-    background: #111;
-    /* Safe area padding (notches / dynamic island) */
+    overflow: hidden;
+    touch-action: none; /* Prevent all default browser scrolling/zooming */
+    background: transparent;
     padding: env(safe-area-inset-top) env(safe-area-inset-right)
         env(safe-area-inset-bottom) env(safe-area-inset-left);
+    z-index: 10;
 }
 
-/* Modifier for horizontal-swiping levels (toggled by JavaScript) */
-.game-container.horizontal {
-    touch-action: pan-x;
-    scroll-snap-type: x mandatory;
+/* ---- Scroll Wrapper (translates via JS) ---- */
+.scroll-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
 }
 
 /* ---- Level Screen (each full-viewport page) ---- */
 .level-screen {
-    scroll-snap-align: start;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -61,9 +62,21 @@ body {
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    /* Prevent images / elements from causing overflow */
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* Background Canvas for each screen */
+.bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background: #111;
 }
 
 /* ---- Content Styling (for dynamic content inside level-screen) ---- */
@@ -85,96 +98,4 @@ body {
     touch-action: manipulation; /* reduces tap delay */
 }
 
-/* ====================================================================
-   Dev Mode – Split‑screen Layout
-   ==================================================================== */
-body.dev-active {
-    display: flex;
-    flex-direction: row; /* game left, dev tools right */
-    height: 100vh;
-    overflow: hidden;
-}
 
-body.dev-active .game-container {
-    position: relative; /* remove fixed positioning in dev */
-    width: 50vw;
-    height: 100vh;
-    overflow-y: scroll;
-}
-
-/* Dev tools panel – right half */
-#dev-panel {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background: #1a1a2e;
-    border-left: 2px solid #333;
-    overflow: hidden;
-}
-
-.dev-header {
-    padding: 0.5rem;
-    background: #16213e;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-shrink: 0;
-}
-
-.dev-header select,
-.dev-header button {
-    font-size: 0.85rem;
-    padding: 0.3rem 0.5rem;
-}
-
-.dev-header button {
-    background: #0f3460;
-    color: #e0e0e0;
-    border: 1px solid #533483;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.dev-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-}
-
-/* Visualizer graph area */
-#vis-network-container {
-    flex: 1;
-    border-bottom: 2px solid #333;
-    min-height: 200px;
-}
-
-/* JSON editor area */
-.json-editor {
-    flex: 0 0 45%; /* roughly half of the dev panel height */
-    display: flex;
-    flex-direction: column;
-    min-height: 150px;
-}
-
-.json-editor-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.3rem 0.5rem;
-    background: #111;
-    font-size: 0.75rem;
-    color: #aaa;
-}
-
-.json-editor textarea {
-    flex: 1;
-    background: #0d0d1a;
-    color: #b0ffb0;
-    border: none;
-    padding: 0.5rem;
-    font-family: "Fira Code", monospace;
-    font-size: 0.75rem;
-    resize: none;
-    outline: none;
-}

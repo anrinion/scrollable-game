@@ -7,17 +7,55 @@ class SwipeGameEngine {
         : container;
     if (!this.container) throw new Error("Container element not found");
 
+    // Setup wrapper for JS translation
+    this.wrapper = document.createElement("div");
+    this.wrapper.className = "scroll-wrapper";
+    this.container.appendChild(this.wrapper);
+
     this.currentLevel = null;
     this.currentState = null;
     this.nodes = {};
     this.autoTimers = [];
     this.currentComponent = null;
+    this.activeBackgrounds = [];
 
     this.components = new Map();
     this.conditions = new Map();
     this.hooks = new Map();
-
     this._listeners = {};
+
+    this._translateX = 0;
+    this._translateY = 0;
+    this._isAnimating = false;
+
+    // Initialize gesture tracker
+    this.gestureTracker = new GestureTracker(this.container, {
+      onDragStart: () => {
+        if (this._isAnimating) return;
+        this.wrapper.style.transition = "none";
+      },
+      onDrag: ({ dx, dy }) => {
+        if (this._isAnimating) return;
+        this._translateX = dx;
+        this._translateY = dy;
+        this._applyTransform();
+      },
+      onRelease: ({ committed, direction, dx, dy }) => {
+        if (this._isAnimating) return;
+        if (committed && direction) {
+          // Check if direction is valid
+          const node = this.nodes[this.currentState];
+          const hasTransition = node?.transitions?.some(t => t.event === direction && this._checkCondition(t.condition));
+          
+          if (hasTransition) {
+            this._snapAndTransition(direction);
+            return;
+          }
+        }
+        // Cancel / snap back
+        this._snapBack();
+      }
+    });
   }
 
   on(event, callback) {
@@ -39,7 +77,7 @@ class SwipeGameEngine {
     const level = this.config.levels[levelId];
     if (!level) throw new Error(`Level "${levelId}" not found in config`);
 
-    level.id = levelId; // ensures visualizer & dev tools can identify the level
+    level.id = levelId;
 
     this._clearAutoTimers();
     this._unmountCurrentComponent();
@@ -48,9 +86,49 @@ class SwipeGameEngine {
     this.nodes = level.nodes;
     this.currentState = level.initial;
 
-    this._executeHook(this.nodes[this.currentState]?.onEnter);
-    this._renderCurrentNode();
+    this._translateX = 0;
+    this._translateY = 0;
+    this._applyTransform();
 
+    this._executeHook(this.nodes[this.currentState]?.onEnter);
+    this._renderVirtualGrid();
+
+    this._emit("stateChange", {
+      level: this.currentLevel,
+      state: this.currentState,
+    });
+  }
+
+  jumpToState(levelId, stateId) {
+    const level = this.config.levels[levelId];
+    if (!level) return;
+    
+    // Set level data if we are jumping to a new level
+    level.id = levelId;
+    this.currentLevel = level;
+    this.nodes = level.nodes;
+    
+    const node = this.nodes[stateId];
+    if (!node) return;
+
+    if (this.currentState && this.nodes[this.currentState]) {
+      this._executeHook(this.nodes[this.currentState].onExit);
+    }
+    
+    this._clearAutoTimers();
+    this._unmountCurrentComponent();
+
+    this.currentState = stateId;
+    
+    // Reset translation since the new state becomes the center
+    this._translateX = 0;
+    this._translateY = 0;
+    this.wrapper.style.transition = "none";
+    this._applyTransform();
+
+    this._executeHook(node.onEnter);
+    this._renderVirtualGrid();
+    
     this._emit("stateChange", {
       level: this.currentLevel,
       state: this.currentState,
@@ -72,30 +150,10 @@ class SwipeGameEngine {
     }
   }
 
-  jumpToState(stateId) {
-    const node = this.nodes[stateId];
-    if (!node) return;
-
-    if (this.currentState && this.nodes[this.currentState]) {
-      this._executeHook(this.nodes[this.currentState].onExit);
-    }
-    this._clearAutoTimers();
-    this._unmountCurrentComponent();
-
-    this.currentState = stateId;
-    this._executeHook(node.onEnter);
-    this._renderCurrentNode();
-    this._emit("stateChange", {
-      level: this.currentLevel,
-      state: this.currentState,
-    });
-  }
-
   _transitionTo(targetId) {
     const targetNode = this.nodes[targetId];
 
     if (!targetNode) {
-      // Target might be a level ID – load that level
       const nextLevel = this.config.levels[targetId];
       if (nextLevel) {
         this.loadLevel(targetId);
@@ -112,44 +170,173 @@ class SwipeGameEngine {
     this._unmountCurrentComponent();
 
     this.currentState = targetId;
+    
+    // Reset translation since the new state becomes the center
+    this._translateX = 0;
+    this._translateY = 0;
+    this.wrapper.style.transition = "none";
+    this._applyTransform();
+
     this._executeHook(targetNode.onEnter);
-    this._renderCurrentNode();
+    this._renderVirtualGrid();
+    
     this._emit("stateChange", {
       level: this.currentLevel,
       state: this.currentState,
     });
   }
 
-  _renderCurrentNode() {
+  _renderVirtualGrid() {
+    this.wrapper.innerHTML = "";
+    
+    // Clean up old backgrounds to stop animation loops
+    this.activeBackgrounds.forEach(bg => bg.destroy());
+    this.activeBackgrounds = [];
+
     const node = this.nodes[this.currentState];
     if (!node) return;
-    this.container.innerHTML = "";
-    const content = node.content;
-    if (!content) return;
 
-    switch (content.type) {
-      case "text":
-        this.container.textContent = content.value;
-        break;
-      case "html":
-        this.container.innerHTML = content.value;
-        break;
-      case "component":
-        this._mountComponent(content.component, content.props);
-        break;
-      default:
-        console.warn(`Unknown content type: ${content.type}`);
+    // Render current node at center
+    const currentEl = this._createScreenElement(node, 0, 0, this.currentLevel.id);
+    this.wrapper.appendChild(currentEl);
+
+    // Pre-render adjacent nodes
+    if (node.transitions) {
+      const renderedTargets = new Set(); // Avoid rendering same target multiple times
+      
+      for (const trans of node.transitions) {
+        if (!this._checkCondition(trans.condition)) continue;
+        if (trans.event === "auto" || renderedTargets.has(trans.target)) continue;
+        
+        let tx = 0, ty = 0;
+        if (trans.event === "swipe_up") ty = window.innerHeight; // target is below
+        else if (trans.event === "swipe_down") ty = -window.innerHeight; // target is above
+        else if (trans.event === "swipe_left") tx = window.innerWidth; // target is to the right
+        else if (trans.event === "swipe_right") tx = -window.innerWidth; // target is to the left
+        else continue;
+
+        let targetLevelId = this.currentLevel.id;
+        let targetNode = this.nodes[trans.target];
+        if (!targetNode && this.config.levels[trans.target]) {
+          targetLevelId = trans.target;
+          targetNode = this.config.levels[trans.target].nodes[this.config.levels[trans.target].initial];
+        }
+        
+        if (targetNode) {
+          const el = this._createScreenElement(targetNode, tx, ty, targetLevelId);
+          this.wrapper.appendChild(el);
+          renderedTargets.add(trans.target);
+        }
+      }
     }
+
     this._scheduleAutoTransitions();
+  }
+
+  _createScreenElement(node, x, y, levelId) {
+    const el = document.createElement("div");
+    el.className = "level-screen";
+    el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    
+    // Add background canvas for this specific screen
+    const canvas = document.createElement("canvas");
+    canvas.className = "bg-canvas";
+    el.appendChild(canvas);
+    
+    // Initialize background
+    const seed = levelId + node.id;
+    const bg = new window.ProceduralBackground(canvas, seed);
+    this.activeBackgrounds.push(bg);
+
+    // Content container wrapper to sit above background
+    const contentDiv = document.createElement("div");
+    contentDiv.style.position = "relative";
+    contentDiv.style.zIndex = "2";
+    
+    const content = node.content;
+    if (content) {
+      if (content.type === "text") {
+        contentDiv.textContent = content.value;
+      } else if (content.type === "html") {
+        contentDiv.innerHTML = content.value;
+      } else if (content.type === "component") {
+        if (x === 0 && y === 0) { // Only mount component for active screen
+          this._mountComponent(content.component, content.props, contentDiv);
+        }
+      }
+    }
+    
+    el.appendChild(contentDiv);
+    return el;
+  }
+
+  _applyTransform() {
+    this.wrapper.style.transform = `translate3d(${this._translateX}px, ${this._translateY}px, 0)`;
+  }
+
+  _snapAndTransition(direction) {
+    this._isAnimating = true;
+    let tx = 0, ty = 0;
+    if (direction === "swipe_up") ty = -window.innerHeight; // wrapper moves up
+    else if (direction === "swipe_down") ty = window.innerHeight;
+    else if (direction === "swipe_left") tx = -window.innerWidth;
+    else if (direction === "swipe_right") tx = window.innerWidth;
+
+    this.wrapper.style.transition = "transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+    this._translateX = tx;
+    this._translateY = ty;
+    this._applyTransform();
+
+    setTimeout(() => {
+      this._isAnimating = false;
+      this.handleEvent(direction);
+    }, 300);
+  }
+
+  _snapBack() {
+    this._isAnimating = true;
+    this.wrapper.style.transition = "transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+    this._translateX = 0;
+    this._translateY = 0;
+    this._applyTransform();
+    setTimeout(() => {
+      this._isAnimating = false;
+    }, 300);
   }
 
   _scheduleAutoTransitions() {
     const node = this.nodes[this.currentState];
     if (!node || !node.transitions) return;
     node.transitions.forEach((trans) => {
-      if (trans.event !== "auto") return;
+      if (!trans.event.startsWith("auto")) return;
       const delay = trans.delay || 0;
-      const timerId = setTimeout(() => this.handleEvent("auto"), delay);
+      
+      const timerId = setTimeout(() => {
+        // Parse visualization parameter from event name
+        let ty = 0;
+        let tx = 0;
+        let animate = false;
+        
+        if (trans.event === "auto_swipe_up") { ty = -window.innerHeight; animate = true; }
+        else if (trans.event === "auto_swipe_down") { ty = window.innerHeight; animate = true; }
+        else if (trans.event === "auto_swipe_left") { tx = -window.innerWidth; animate = true; }
+        else if (trans.event === "auto_swipe_right") { tx = window.innerWidth; animate = true; }
+        
+        if (animate) {
+          this._isAnimating = true;
+          this.wrapper.style.transition = "transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)";
+          this._translateX = tx;
+          this._translateY = ty;
+          this._applyTransform();
+          setTimeout(() => {
+            this._isAnimating = false;
+            this.handleEvent(trans.event);
+          }, 600);
+        } else {
+          // Instant cut (e.g. "auto" or "auto_fade")
+          this.handleEvent(trans.event);
+        }
+      }, delay);
       this.autoTimers.push(timerId);
     });
   }
@@ -179,7 +366,7 @@ class SwipeGameEngine {
     if (fn) fn(this.nodes[this.currentState], this);
   }
 
-  _mountComponent(componentName, props = {}) {
+  _mountComponent(componentName, props = {}, container = this.wrapper) {
     const ComponentClass = this.components.get(componentName);
     if (!ComponentClass) {
       console.error(`Component "${componentName}" not registered`);
@@ -187,7 +374,7 @@ class SwipeGameEngine {
     }
     const instance = new ComponentClass(props);
     this.currentComponent = instance;
-    instance.mount(this.container, (eventType) => this.handleEvent(eventType));
+    instance.mount(container, (eventType) => this.handleEvent(eventType));
   }
 
   _unmountCurrentComponent() {

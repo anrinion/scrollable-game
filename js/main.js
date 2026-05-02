@@ -5,8 +5,9 @@
   const config = await response.json();
 
   const engine = new SwipeGameEngine(config, container);
-  const detector = new SwipeDetector();
-  detector.init(container, (eventType) => engine.handleEvent(eventType));
+  
+  // Register custom plugins
+  engine.registerComponent("ButtonChoicePlugin", ButtonChoicePlugin);
 
   engine.loadLevel("level_01");
 
