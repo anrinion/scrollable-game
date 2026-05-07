@@ -7,7 +7,7 @@
           "id": "start",
           "content": {
             "type": "text",
-            "value": "You know what to do"
+            "value": "Ты знаешь, что делать"
           },
           "transitions": [
             {
@@ -43,7 +43,7 @@
           "id": "cat",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -61,7 +61,7 @@
           "id": "recipe",
           "content": {
             "type": "text",
-            "value": "5-minute pasta recipe"
+            "value": "Рецепт пасты за 5 минут"
           },
           "transitions": [
             {
@@ -79,7 +79,7 @@
           "id": "ad",
           "content": {
             "type": "text",
-            "value": "Sponsored"
+            "value": "Реклама"
           },
           "transitions": [
             {
@@ -97,7 +97,7 @@
           "id": "meme",
           "content": {
             "type": "text",
-            "value": "Funny meme"
+            "value": "Смешной мем"
           },
           "transitions": [
             {
@@ -115,7 +115,7 @@
           "id": "loading",
           "content": {
             "type": "text",
-            "value": "Loading..."
+            "value": "Загрузка..."
           },
           "transitions": [
             {
@@ -133,7 +133,7 @@
           "id": "boring",
           "content": {
             "type": "text",
-            "value": "Someone talking about their day"
+            "value": "Кто-то рассказывает о своем дне"
           },
           "transitions": [
             {
@@ -151,7 +151,7 @@
           "id": "lifehack",
           "content": {
             "type": "text",
-            "value": "Life hack you need to know"
+            "value": "Лайфхак, который ты должен знать"
           },
           "transitions": [
             {
@@ -164,7 +164,7 @@
           "id": "wait_thought",
           "content": {
             "type": "text",
-            "value": "Oh there was something interesting"
+            "value": "О, там было что-то интересное"
           },
           "transitions": [
             {
@@ -181,7 +181,7 @@
           "id": "no_go_back",
           "content": {
             "type": "text",
-            "value": "No, no, go back"
+            "value": "Нет, нет, вернись обратно"
           },
           "transitions": [
             {
@@ -194,7 +194,7 @@
           "id": "went_back",
           "content": {
             "type": "text",
-            "value": "Nevermind"
+            "value": "Неважно"
           },
           "transitions": [
             {
@@ -212,7 +212,7 @@
           "id": "dance",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -230,7 +230,7 @@
           "id": "dog",
           "content": {
             "type": "text",
-            "value": "Dog does a trick"
+            "value": "Собака выполняет трюк"
           },
           "transitions": [
             {
@@ -248,7 +248,7 @@
           "id": "same_dog",
           "content": {
             "type": "text",
-            "value": "Same dog, different trick"
+            "value": "Та же собака, другой трюк"
           },
           "transitions": [
             {
@@ -266,7 +266,7 @@
           "id": "autoplay",
           "content": {
             "type": "text",
-            "value": "Satisfying loop"
+            "value": "Бесконечное видео"
           },
           "transitions": [
             {
@@ -289,7 +289,7 @@
           "id": "notification",
           "content": {
             "type": "text",
-            "value": "You have 3 new notifications"
+            "value": "У тебя 3 новых уведомления"
           },
           "transitions": [
             {
@@ -306,7 +306,7 @@
           "id": "ignored",
           "content": {
             "type": "text",
-            "value": "Later"
+            "value": "Позже"
           },
           "transitions": [
             {
@@ -324,7 +324,7 @@
           "id": "keepgoing",
           "content": {
             "type": "text",
-            "value": "Keep scrolling"
+            "value": "Продолжай скроллить"
           },
           "transitions": [
             {
@@ -342,7 +342,7 @@
           "id": "dogs",
           "content": {
             "type": "text",
-            "value": "Dogs"
+            "value": "Собаки"
           },
           "transitions": [
             {
@@ -360,7 +360,7 @@
           "id": "question",
           "content": {
             "type": "text",
-            "value": "Are you tired of scrolling?"
+            "value": "Ты не устал?"
           },
           "transitions": [
             {
@@ -373,7 +373,7 @@
           "id": "solution",
           "content": {
             "type": "text",
-            "value": "Let's enable autoscroll"
+            "value": "Давай включим автоскролл"
           },
           "transitions": [
             {
@@ -392,7 +392,7 @@
           "id": "auto1",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -411,7 +411,7 @@
           "id": "auto2",
           "content": {
             "type": "text",
-            "value": "5-minute pasta recipe"
+            "value": "Рецепт пасты за 5 минут"
           },
           "transitions": [
             {
@@ -430,7 +430,7 @@
           "id": "auto3",
           "content": {
             "type": "text",
-            "value": "Sponsored"
+            "value": "Реклама"
           },
           "transitions": [
             {
@@ -449,7 +449,7 @@
           "id": "auto4",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -468,7 +468,7 @@
           "id": "auto5",
           "content": {
             "type": "text",
-            "value": "Dog does a trick"
+            "value": "Собака выполняет трюк"
           },
           "transitions": [
             {
@@ -487,7 +487,7 @@
           "id": "realization",
           "content": {
             "type": "text",
-            "value": "No. That's... boring?"
+            "value": "Нет. Это... скучно?"
           },
           "transitions": [
             {
@@ -501,7 +501,7 @@
           "id": "back_to_manual",
           "content": {
             "type": "text",
-            "value": "Returning to manual labor..."
+            "value": "Возвращение к ручному труду..."
           },
           "transitions": [
             {
@@ -519,7 +519,7 @@
           "id": "manual1",
           "content": {
             "type": "text",
-            "value": "Funny meme"
+            "value": "Смешной мем"
           },
           "transitions": [
             {
@@ -537,7 +537,7 @@
           "id": "manual2",
           "content": {
             "type": "text",
-            "value": "Life hack you need to know"
+            "value": "Лайфхак, который ты должен знать"
           },
           "transitions": [
             {
@@ -555,7 +555,7 @@
           "id": "manual3",
           "content": {
             "type": "text",
-            "value": "Someone talking about their day"
+            "value": "Кто-то рассказывает о своем дне"
           },
           "transitions": [
             {
@@ -573,7 +573,7 @@
           "id": "manual4",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -591,7 +591,7 @@
           "id": "manual5",
           "content": {
             "type": "text",
-            "value": "Multiple cats together"
+            "value": "Несколько котов вместе"
           },
           "transitions": [
             {
@@ -609,7 +609,7 @@
           "id": "hey",
           "content": {
             "type": "text",
-            "value": "Hey"
+            "value": "Слушай"
           },
           "transitions": [
             {
@@ -627,7 +627,7 @@
           "id": "check",
           "content": {
             "type": "text",
-            "value": "Are you still here?"
+            "value": "Ты все еще здесь?"
           },
           "transitions": [
             {
@@ -645,7 +645,7 @@
           "id": "content1",
           "content": {
             "type": "text",
-            "value": "Satisfying loop"
+            "value": "Бесконечное видео"
           },
           "transitions": [
             {
@@ -663,7 +663,7 @@
           "id": "content2",
           "content": {
             "type": "text",
-            "value": "Dog does a trick"
+            "value": "Собака выполняет трюк"
           },
           "transitions": [
             {
@@ -681,7 +681,7 @@
           "id": "content3",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -699,7 +699,7 @@
           "id": "question1",
           "content": {
             "type": "text",
-            "value": "Honestly I don't know what you are expecting to find"
+            "value": "Честно говоря, я не знаю, что ты ожидаешь найти"
           },
           "transitions": [
             {
@@ -717,7 +717,7 @@
           "id": "question2",
           "content": {
             "type": "text",
-            "value": "Do you think there is the end?"
+            "value": "Ты думаешь, здесь есть конец?"
           },
           "transitions": [
             {
@@ -735,7 +735,7 @@
           "id": "content4",
           "content": {
             "type": "text",
-            "value": "Sponsored"
+            "value": "Реклама"
           },
           "transitions": [
             {
@@ -753,7 +753,7 @@
           "id": "content5",
           "content": {
             "type": "text",
-            "value": "5-minute pasta recipe"
+            "value": "Рецепт пасты за 5 минут"
           },
           "transitions": [
             {
@@ -771,7 +771,7 @@
           "id": "content6",
           "content": {
             "type": "text",
-            "value": "Life hack you need to know"
+            "value": "Лайфхак, который ты должен знать"
           },
           "transitions": [
             {
@@ -789,7 +789,7 @@
           "id": "threat1",
           "content": {
             "type": "text",
-            "value": "I could make it an infinite loop, you know"
+            "value": "Я мог бы просто зациклить это"
           },
           "transitions": [
             {
@@ -807,7 +807,7 @@
           "id": "threat2",
           "content": {
             "type": "text",
-            "value": "I could make it an infinite loop, you know"
+            "value": "Я мог бы просто зациклить это"
           },
           "transitions": [
             {
@@ -825,7 +825,7 @@
           "id": "threat3",
           "content": {
             "type": "text",
-            "value": "I could make it an infinite loop, you know"
+            "value": "Я мог бы просто зациклить это"
           },
           "transitions": [
             {
@@ -843,7 +843,7 @@
           "id": "relief",
           "content": {
             "type": "text",
-            "value": "... I haven't. Yet."
+            "value": "... но нет. Пока."
           },
           "transitions": [
             {
@@ -861,7 +861,7 @@
           "id": "content7",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -879,7 +879,7 @@
           "id": "content8",
           "content": {
             "type": "text",
-            "value": "Funny meme"
+            "value": "Смешной мем"
           },
           "transitions": [
             {
@@ -897,7 +897,7 @@
           "id": "content9",
           "content": {
             "type": "text",
-            "value": "Someone talking about their day"
+            "value": "Кто-то рассказывает о своем дне"
           },
           "transitions": [
             {
@@ -915,7 +915,7 @@
           "id": "the_end",
           "content": {
             "type": "text",
-            "value": "THE END"
+            "value": "КОНЕЦ"
           },
           "transitions": [
             {
@@ -929,7 +929,7 @@
           "id": "still_here",
           "content": {
             "type": "text",
-            "value": "Why are you still here?"
+            "value": "Почему ты все еще здесь?"
           },
           "transitions": [
             {
@@ -943,7 +943,7 @@
           "id": "seriously",
           "content": {
             "type": "text",
-            "value": "This is THE END. There is no more videos. You did it. Congratulations."
+            "value": "Это КОНЕЦ. Видео закончились. Ты победил. Поздравляю."
           },
           "transitions": [
             {
@@ -957,7 +957,7 @@
           "id": "no_seriously",
           "content": {
             "type": "text",
-            "value": "No, seriously. You scrolled till the end. You won the game."
+            "value": "Нет, серьезно. Ты досмотрел до конца. Ты прошёл игру."
           },
           "transitions": [
             {
@@ -971,7 +971,7 @@
           "id": "ugh",
           "content": {
             "type": "text",
-            "value": "Ugh... ok, just 5 more minutes"
+            "value": "Мда... ладно, еще 5 минут"
           },
           "transitions": [
             {
@@ -989,7 +989,7 @@
           "id": "back",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -1007,7 +1007,7 @@
           "id": "content1",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -1025,7 +1025,7 @@
           "id": "content2",
           "content": {
             "type": "text",
-            "value": "Sponsored"
+            "value": "Реклама"
           },
           "transitions": [
             {
@@ -1043,7 +1043,7 @@
           "id": "content3",
           "content": {
             "type": "text",
-            "value": "Life hack you need to know"
+            "value": "Лайфхак, который ты должен знать"
           },
           "transitions": [
             {
@@ -1061,7 +1061,7 @@
           "id": "content4",
           "content": {
             "type": "text",
-            "value": "Dog does a trick"
+            "value": "Собака выполняет трюк"
           },
           "transitions": [
             {
@@ -1079,7 +1079,7 @@
           "id": "content5",
           "content": {
             "type": "text",
-            "value": "Everyone is doing this"
+            "value": "Все это делают"
           },
           "transitions": [
             {
@@ -1097,7 +1097,7 @@
           "id": "ok",
           "content": {
             "type": "text",
-            "value": "Ok"
+            "value": "Ок"
           },
           "transitions": [
             {
@@ -1115,7 +1115,7 @@
           "id": "problem",
           "content": {
             "type": "text",
-            "value": "You clearly have some kind of a scrolling problem"
+            "value": "У тебя явно какая-то проблема со скроллингом"
           },
           "transitions": [
             {
@@ -1133,7 +1133,7 @@
           "id": "no_judgment",
           "content": {
             "type": "text",
-            "value": "(no judgment)"
+            "value": "(без осуждения)"
           },
           "transitions": [
             {
@@ -1151,7 +1151,7 @@
           "id": "happy",
           "content": {
             "type": "text",
-            "value": "(in fact, I'm kinda happy... otherwise we wouldn't be talking right now)"
+            "value": "(на самом деле, я даже рад... иначе бы мы сейчас не разговаривали)"
           },
           "transitions": [
             {
@@ -1169,7 +1169,7 @@
           "id": "question",
           "content": {
             "type": "text",
-            "value": "Do you want to talk about it?"
+            "value": "Хочешь поговорить об этом?"
           },
           "transitions": [
             {
@@ -1186,7 +1186,7 @@
           "id": "rejected",
           "content": {
             "type": "text",
-            "value": "Did you just swipe left on me!? :("
+            "value": "Ты только что свайпнул меня влево!? :("
           },
           "transitions": [
             {
@@ -1199,7 +1199,7 @@
           "id": "accepted",
           "content": {
             "type": "text",
-            "value": "Great! It's the first step to healing, you know"
+            "value": "Отлично! Признание проблемы - первый шаг к исцелению"
           },
           "transitions": [
             {
@@ -1217,7 +1217,7 @@
           "id": "loop1",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -1235,7 +1235,7 @@
           "id": "loop2",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -1253,7 +1253,7 @@
           "id": "loop3",
           "content": {
             "type": "text",
-            "value": "Sponsored"
+            "value": "Реклама"
           },
           "transitions": [
             {
@@ -1271,7 +1271,7 @@
           "id": "ask_again",
           "content": {
             "type": "text",
-            "value": "So... do you want to talk about your scrolling problem?"
+            "value": "Так... хочешь поговорить о своей проблеме со скроллингом?"
           },
           "transitions": [
             {
@@ -1288,7 +1288,7 @@
           "id": "finally",
           "content": {
             "type": "text",
-            "value": "Great! It's the first step to healing, you know"
+            "value": "Отлично! Признание проблемы - первый шаг к исцелению"
           },
           "transitions": [
             {
@@ -1306,7 +1306,7 @@
           "id": "cat1",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -1324,7 +1324,7 @@
           "id": "dance1",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -1342,7 +1342,7 @@
           "id": "wrong",
           "content": {
             "type": "text",
-            "value": "Someone is wrong on the internet"
+            "value": "Кто-то неправ в интернете"
           },
           "transitions": [
             {
@@ -1360,7 +1360,7 @@
           "id": "fact_thumb",
           "content": {
             "type": "text",
-            "value": "Fact: Your thumb lives in the 'natural zone' of the screen 96% of the time. 75% of people navigate with one thumb, 49% hold the phone one-handed. Swiping up is the most efficient movement."
+            "value": "Факт: большой палец находится в 'естественной зоне' экрана 96% времени. 75% людей используют телефон одним пальцем, 49% держат телефон одной рукой. Свайп вверх - самое эффективное движение."
           },
           "transitions": [
             {
@@ -1378,7 +1378,7 @@
           "id": "dog1",
           "content": {
             "type": "text",
-            "value": "Dog does a trick"
+            "value": "Собака выполняет трюк"
           },
           "transitions": [
             {
@@ -1396,7 +1396,7 @@
           "id": "lifehack1",
           "content": {
             "type": "text",
-            "value": "Life hack you need to know"
+            "value": "Лайфхак, который ты должен знать"
           },
           "transitions": [
             {
@@ -1414,7 +1414,7 @@
           "id": "sponsored1",
           "content": {
             "type": "text",
-            "value": "Sponsored"
+            "value": "Реклама"
           },
           "transitions": [
             {
@@ -1432,7 +1432,7 @@
           "id": "meme1",
           "content": {
             "type": "text",
-            "value": "Funny meme"
+            "value": "Смешной мем"
           },
           "transitions": [
             {
@@ -1450,7 +1450,7 @@
           "id": "fact_visual",
           "content": {
             "type": "text",
-            "value": "Fact: The vertical feed fills your entire screen, wiping out distractions. Eye-tracking shows you focus on the top 60% of the screen for the video, while the bottom third is reserved for your thumb to scroll."
+            "value": "Факт: вертикальная лента заполняет весь экран, устраняя отвлечения. Отслеживание взгляда показывает, что мы фокусируемся на верхних 60% экрана для просмотра видео, в то время как нижняя треть зарезервирована для большого пальца."
           },
           "transitions": [
             {
@@ -1468,7 +1468,7 @@
           "id": "soap",
           "content": {
             "type": "text",
-            "value": "Satisfying soap cutting"
+            "value": "Удовлетворяющее резание мыла"
           },
           "transitions": [
             {
@@ -1486,7 +1486,7 @@
           "id": "baby",
           "content": {
             "type": "text",
-            "value": "Cute baby animal compilation"
+            "value": "Подборка милых детенышей животных"
           },
           "transitions": [
             {
@@ -1504,7 +1504,7 @@
           "id": "dance2",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -1522,7 +1522,7 @@
           "id": "boring1",
           "content": {
             "type": "text",
-            "value": "Someone talking about their day"
+            "value": "Кто-то рассказывает о своем дне"
           },
           "transitions": [
             {
@@ -1540,7 +1540,7 @@
           "id": "fact_grid",
           "content": {
             "type": "text",
-            "value": "Fact: Creators use transparent grid overlays in editing apps to make sure their faces aren't covered by the app's UI. If a talking head gets buried under buttons, conversion rates can drop 30%."
+            "value": "Факт: Создатели видео используют шаблоны в редакторах видео, чтобы убедиться, что их лица не перекрываются интерфейсом приложения. Если говорящая голова закапывается под кнопками, коэффициент конверсии может упасть на 30%."
           },
           "transitions": [
             {
@@ -1558,7 +1558,7 @@
           "id": "opinion",
           "content": {
             "type": "text",
-            "value": "Unpopular opinion thread"
+            "value": "Тред с непопулярным мнением"
           },
           "transitions": [
             {
@@ -1576,7 +1576,7 @@
           "id": "cat2",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -1594,7 +1594,7 @@
           "id": "dog2",
           "content": {
             "type": "text",
-            "value": "Dog does a trick"
+            "value": "Собака выполняет трюк"
           },
           "transitions": [
             {
@@ -1612,7 +1612,7 @@
           "id": "fact_150ms",
           "content": {
             "type": "text",
-            "value": "Fact: NYU researchers found your brain processes a short sentence in about 150ms — as fast as a visual scene. That's why text overlays on TikToks work: you've already read them before you even realize you're looking at words."
+            "value": "Факт: Исследователи из NYU обнаружили, что наш мозг обрабатывает короткое предложение примерно за 150 миллисекунд - так же быстро, как визуальную сцену. Именно поэтому субтитры в TikTok работают так хорошо."
           },
           "transitions": [
             {
@@ -1630,7 +1630,7 @@
           "id": "asmr",
           "content": {
             "type": "text",
-            "value": "ASMR triggers for relaxation"
+            "value": "ASMR триггеры для расслабления"
           },
           "transitions": [
             {
@@ -1648,7 +1648,7 @@
           "id": "fact_variable",
           "content": {
             "type": "text",
-            "value": "Notice what I just did? I've been spacing out these facts unpredictably — sometimes after three videos, sometimes after five, sometimes just one. That's variable ratio reinforcement. It's exactly how slot machines keep you pulling the lever."
+            "value": "Заметили, что я только что сделал? Я размещал эти факты непредсказуемо - иногда после трех видео, иногда после пяти, иногда после всего одного. Это подкрепление с переменной частотой. Именно так игровые автоматы заставляют нас тянуть за рычаг."
           },
           "transitions": [
             {
@@ -1666,7 +1666,7 @@
           "id": "neutral1",
           "content": {
             "type": "text",
-            "value": "5-minute pasta recipe"
+            "value": "Рецепт пасты за 5 минут"
           },
           "transitions": [
             {
@@ -1684,7 +1684,7 @@
           "id": "neutral2",
           "content": {
             "type": "text",
-            "value": "Funny meme"
+            "value": "Смешной мем"
           },
           "transitions": [
             {
@@ -1702,7 +1702,7 @@
           "id": "choice",
           "content": {
             "type": "text",
-            "value": "TikTok works out if you liked a video by how long you pause, how fast you swipe, whether you rewatch. This is just a simple game – I don't track your reaction time. So please help me out: do you prefer cats (swipe left) or dogs (swipe right)?"
+            "value": "TikTok определяет, понравилось ли нам видео, по тому, как быстро мы свайпаем. Это простая игра - я не отслеживаю время твоей реакции. Так что, пожалуйста, помоги мне: ты предпочитаешь котов (свайп влево) или собак (свайп вправо)?"
           },
           "transitions": [
             {
@@ -1724,7 +1724,7 @@
           "id": "cat1",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -1742,7 +1742,7 @@
           "id": "cat2",
           "content": {
             "type": "text",
-            "value": "Kitten tries to jump"
+            "value": "Котенок пытается прыгнуть"
           },
           "transitions": [
             {
@@ -1760,7 +1760,7 @@
           "id": "cat3_non",
           "content": {
             "type": "text",
-            "value": "Life hack you need to know"
+            "value": "Лайфхак, который ты должен знать"
           },
           "transitions": [
             {
@@ -1778,7 +1778,7 @@
           "id": "cat4",
           "content": {
             "type": "text",
-            "value": "Cat compilation #47"
+            "value": "Подборка котов #47"
           },
           "transitions": [
             {
@@ -1796,7 +1796,7 @@
           "id": "cat_ad",
           "content": {
             "type": "text",
-            "value": "Sponsored: Cat subscription box"
+            "value": "Реклама: Коробка с подпиской на котов"
           },
           "transitions": [
             {
@@ -1814,7 +1814,7 @@
           "id": "cat5",
           "content": {
             "type": "text",
-            "value": "Sleeping cat in weird positions"
+            "value": "Спящий кот в странных позах"
           },
           "transitions": [
             {
@@ -1832,7 +1832,7 @@
           "id": "cat6_non",
           "content": {
             "type": "text",
-            "value": "Dog does a trick"
+            "value": "Собака выполняет трюк"
           },
           "transitions": [
             {
@@ -1850,7 +1850,7 @@
           "id": "cat7",
           "content": {
             "type": "text",
-            "value": "Cat vs. laser pointer"
+            "value": "Кот против лазерной указки"
           },
           "transitions": [
             {
@@ -1868,7 +1868,7 @@
           "id": "cat8_non",
           "content": {
             "type": "text",
-            "value": "Someone talking about their day"
+            "value": "Кто-то рассказывает о своем дне"
           },
           "transitions": [
             {
@@ -1886,7 +1886,7 @@
           "id": "cat_end",
           "content": {
             "type": "text",
-            "value": "Cat gets killed"
+            "value": "Кота убивают"
           },
           "transitions": [
             {
@@ -1904,7 +1904,7 @@
           "id": "dog1",
           "content": {
             "type": "text",
-            "value": "Dog does a trick"
+            "value": "Собака выполняет трюк"
           },
           "transitions": [
             {
@@ -1922,7 +1922,7 @@
           "id": "dog2",
           "content": {
             "type": "text",
-            "value": "Puppy compilation"
+            "value": "Подборка щенков"
           },
           "transitions": [
             {
@@ -1940,7 +1940,7 @@
           "id": "dog_ad",
           "content": {
             "type": "text",
-            "value": "Sponsored: Dog grooming products"
+            "value": "Реклама: Средства для груминга собак"
           },
           "transitions": [
             {
@@ -1958,7 +1958,7 @@
           "id": "dog3_non",
           "content": {
             "type": "text",
-            "value": "Funny meme"
+            "value": "Смешной мем"
           },
           "transitions": [
             {
@@ -1976,7 +1976,7 @@
           "id": "dog4",
           "content": {
             "type": "text",
-            "value": "Dog reacts to magic trick"
+            "value": "Собака реагирует на фокус"
           },
           "transitions": [
             {
@@ -1994,7 +1994,7 @@
           "id": "dog5_non",
           "content": {
             "type": "text",
-            "value": "Life hack you need to know"
+            "value": "Лайфхак, который ты должен знать"
           },
           "transitions": [
             {
@@ -2012,7 +2012,7 @@
           "id": "dog6",
           "content": {
             "type": "text",
-            "value": "Dog agility course"
+            "value": "Полоса препятствий для собак"
           },
           "transitions": [
             {
@@ -2030,7 +2030,7 @@
           "id": "dog7",
           "content": {
             "type": "text",
-            "value": "Dog howling to music"
+            "value": "Собака воет под музыку"
           },
           "transitions": [
             {
@@ -2048,7 +2048,7 @@
           "id": "dog8_non",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -2066,7 +2066,7 @@
           "id": "dog_end",
           "content": {
             "type": "text",
-            "value": "Dog gets killed"
+            "value": "Собаку убивают"
           },
           "transitions": [
             {
@@ -2084,7 +2084,7 @@
           "id": "algorithm_truth",
           "content": {
             "type": "text",
-            "value": "Sorry. That was hard to watch, I know. But I had to illustrate the point: the algorithm doesn't show you what you like. It shows what keeps you engaged — what causes emotions."
+            "value": "Извини. Это было тяжело смотреть, я знаю. Но мне пришлось проиллюстрировать мысль: алгоритм не показывает вам то, что нам нравится. Он показывает то, что удерживает наше внимание - то, что вызывает эмоции."
           },
           "transitions": [
             {
@@ -2102,7 +2102,7 @@
           "id": "l105",
           "content": {
             "type": "text",
-            "value": "BREAKING: Scientists Confirm Earth Is Flat and NASA Has Been Lying All Along!"
+            "value": "СРОЧНО: Ученые подтверждают, что Земля плоская и NASA все это время врала!"
           },
           "transitions": [
             {
@@ -2120,7 +2120,7 @@
           "id": "l106",
           "content": {
             "type": "text",
-            "value": "The REAL Reason Behind the War Will Make You FURIOUS!"
+            "value": "Настоящая причина войны приведёт вас в ЯРОСТЬ!"
           },
           "transitions": [
             {
@@ -2138,7 +2138,7 @@
           "id": "neutral_01",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -2156,7 +2156,7 @@
           "id": "l108",
           "content": {
             "type": "text",
-            "value": "Why YOUR Generation Is the Worst (and It's Not Up for Debate)"
+            "value": "Почему ВАШЕ поколение - худшее (и это не обсуждается)"
           },
           "transitions": [
             {
@@ -2174,7 +2174,7 @@
           "id": "l109",
           "content": {
             "type": "text",
-            "value": "This Celebrity Just Admitted They're Part of the Deep State"
+            "value": "Эта знаменитость только что призналась, что является частью мирового правительства"
           },
           "transitions": [
             {
@@ -2192,7 +2192,7 @@
           "id": "l110",
           "content": {
             "type": "text",
-            "value": "Liberals Are Eating BUGS to Save the Planet – Are You Next?"
+            "value": "Либералы едят ЖУКОВ, чтобы спасти планету - следующий вы?"
           },
           "transitions": [
             {
@@ -2210,7 +2210,7 @@
           "id": "l111",
           "content": {
             "type": "text",
-            "value": "Death to Photoshop? This 'Real Beauty' Movement Is a LIE"
+            "value": "Смерть Photoshop? Это движение 'Настоящая красота' - ЛОЖЬ"
           },
           "transitions": [
             {
@@ -2228,7 +2228,7 @@
           "id": "l112",
           "content": {
             "type": "text",
-            "value": "Why Vaccines Are Turning Frogs Gay – It's True This Time"
+            "value": "Почему вакцины превращают лягушек в геев - в этот раз это правда"
           },
           "transitions": [
             {
@@ -2246,7 +2246,7 @@
           "id": "neutral_02",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -2264,7 +2264,7 @@
           "id": "l114",
           "content": {
             "type": "text",
-            "value": "You Won't Believe What This Priest Did (NSFW)"
+            "value": "Вы не поверите, что этот священник сделал (18+)"
           },
           "transitions": [
             {
@@ -2282,7 +2282,7 @@
           "id": "l115",
           "content": {
             "type": "text",
-            "value": "The #1 Reason Your Marriage Will Fail (According to AI)"
+            "value": "Причина №1, почему ваш брак провалится (по мнению ИИ)"
           },
           "transitions": [
             {
@@ -2300,7 +2300,7 @@
           "id": "l116",
           "content": {
             "type": "text",
-            "value": "Gender Reveal: God's Opinion – The Bible Weighs In"
+            "value": "Гендер-раскрытие: Мнение Бога - Библия взвешивает"
           },
           "transitions": [
             {
@@ -2318,7 +2318,7 @@
           "id": "l117",
           "content": {
             "type": "text",
-            "value": "LGBTQ Agenda EXPOSED: They're Coming for Your Kids' Lunchboxes"
+            "value": "ЛГБТ повестка РАСКРЫТА: они идут за ланч-боксами ваших детей"
           },
           "transitions": [
             {
@@ -2336,7 +2336,7 @@
           "id": "l118",
           "content": {
             "type": "text",
-            "value": "How to Manipulate Anyone in 5 Simple Steps (Ethically?)"
+            "value": "Как манипулировать любым за 5 простых шагов (этично?)"
           },
           "transitions": [
             {
@@ -2354,7 +2354,7 @@
           "id": "l119",
           "content": {
             "type": "text",
-            "value": "The Holocaust Was Overrated? Shocking New Theory from a 'Historian'"
+            "value": "Холокост был переоценен? Шокирующая новая теория от 'историка'"
           },
           "transitions": [
             {
@@ -2372,7 +2372,7 @@
           "id": "l120",
           "content": {
             "type": "text",
-            "value": "Hitler's Art School Rejection Letter Found – It's Embarrassing"
+            "value": "Письмо об отказе Гитлера из художественной школы найдено - это позор"
           },
           "transitions": [
             {
@@ -2390,7 +2390,7 @@
           "id": "l121",
           "content": {
             "type": "text",
-            "value": "Jews Control the Weather? New Evidence from the Talmud"
+            "value": "Евреи управляют погодой? Новые доказательства из Талмуда"
           },
           "transitions": [
             {
@@ -2408,7 +2408,7 @@
           "id": "neutral_03",
           "content": {
             "type": "text",
-            "value": "Life hack you need to know"
+            "value": "Лайфхак, который ты должен знать"
           },
           "transitions": [
             {
@@ -2426,7 +2426,7 @@
           "id": "l123",
           "content": {
             "type": "text",
-            "value": "COVID Was a Hoax Created by the Media to Sell Hand Sanitizer"
+            "value": "COVID был обманом, созданным медиа для продажи антисептика"
           },
           "transitions": [
             {
@@ -2444,7 +2444,7 @@
           "id": "l124",
           "content": {
             "type": "text",
-            "value": "5G Towers Are Turning Birds into Government Drones – Proof Inside"
+            "value": "Башни 5G превращают птиц в правительственные дроны - доказательство внутри"
           },
           "transitions": [
             {
@@ -2462,7 +2462,7 @@
           "id": "l125",
           "content": {
             "type": "text",
-            "value": "Chemtrails: The Chemicals Are Making You Dumb and the Frogs Gay"
+            "value": "Химические трейсы: Химикаты делают вас глупыми, а лягушек геями"
           },
           "transitions": [
             {
@@ -2480,7 +2480,7 @@
           "id": "l126",
           "content": {
             "type": "text",
-            "value": "This Child's Toy Is Actually A Spy Device – Here's How"
+            "value": "Игрушка этого ребенка на самом деле шпионское устройство - вот как"
           },
           "transitions": [
             {
@@ -2498,7 +2498,7 @@
           "id": "l127",
           "content": {
             "type": "text",
-            "value": "Aliens Built the Pyramids and the Government Won't Admit It"
+            "value": "Инопланетяне построили пирамиды и правительство не признает это"
           },
           "transitions": [
             {
@@ -2516,7 +2516,7 @@
           "id": "neutral_04",
           "content": {
             "type": "text",
-            "value": "Sponsored: Something you don't need"
+            "value": "Реклама: Что-то, что вам не нужно"
           },
           "transitions": [
             {
@@ -2534,7 +2534,7 @@
           "id": "l129",
           "content": {
             "type": "text",
-            "value": "The Moon Landing Was Staged by Disney – Why Do We Believe This?"
+            "value": "Высадка на Луну была постановкой от Disney - почему мы в это верим?"
           },
           "transitions": [
             {
@@ -2552,7 +2552,7 @@
           "id": "l130",
           "content": {
             "type": "text",
-            "value": "Your Phone Is Spying on You Through Your Toothbrush – Details"
+            "value": "Ваш телефон шпионит за вами через зубную щетку - детали"
           },
           "transitions": [
             {
@@ -2570,7 +2570,7 @@
           "id": "l131",
           "content": {
             "type": "text",
-            "value": "Cancel Culture Is Ruining Everything: Here's Why You're Next"
+            "value": "Культура отмены все разрушает: вот почему вы следующий"
           },
           "transitions": [
             {
@@ -2588,7 +2588,7 @@
           "id": "l132",
           "content": {
             "type": "text",
-            "value": "Why It's Actually GOOD to Be Selfish (According to Science)"
+            "value": "Почему на самом деле ХОРОШО быть эгоистом (по мнению науки)"
           },
           "transitions": [
             {
@@ -2606,7 +2606,7 @@
           "id": "l133",
           "content": {
             "type": "text",
-            "value": "The 'Me Too' Movement Has Gone Too Far – My Unpopular Opinion"
+            "value": "Движение 'Я тоже' зашло слишком далеко - мое непопулярное мнение"
           },
           "transitions": [
             {
@@ -2624,7 +2624,7 @@
           "id": "l134",
           "content": {
             "type": "text",
-            "value": "Why I Quit Voting and You Should Too!"
+            "value": "Почему я перестал голосовать и вы тоже должны!"
           },
           "transitions": [
             {
@@ -2642,7 +2642,7 @@
           "id": "neutral_05",
           "content": {
             "type": "text",
-            "value": "Cute baby animal compilation"
+            "value": "Подборка милых детенышей животных"
           },
           "transitions": [
             {
@@ -2660,7 +2660,7 @@
           "id": "l136",
           "content": {
             "type": "text",
-            "value": "This ONE Food Is Going to Kill You by 50 – Doctors Hate It!"
+            "value": "Эта ЕДА убьет вас к 50 годам - врачи ненавидят это!"
           },
           "transitions": [
             {
@@ -2678,7 +2678,7 @@
           "id": "l137",
           "content": {
             "type": "text",
-            "value": "The Secret to Immortality Hidden in This Ancient Text"
+            "value": "Секрет бессмертия скрыт в этом древнем тексте"
           },
           "transitions": [
             {
@@ -2696,7 +2696,7 @@
           "id": "l138",
           "content": {
             "type": "text",
-            "value": "FEMINISM DESTROYED MODERN MEN – Here's the Data"
+            "value": "ФЕМИНИЗМ РАЗРУШИЛ СОВРЕМЕННЫХ МУЖЧИН - вот данные"
           },
           "transitions": [
             {
@@ -2714,7 +2714,7 @@
           "id": "l139",
           "content": {
             "type": "text",
-            "value": "The Truth About Racism: It's Actually Over, Stop Whining"
+            "value": "Правда о расизме: на самом деле все закончено, перестаньте ныть"
           },
           "transitions": [
             {
@@ -2732,7 +2732,7 @@
           "id": "engagement_outro",
           "content": {
             "type": "text",
-            "value": "You're still here, huh. Either you really want to know the ending of this game, or my engagement trap worked. Or both."
+            "value": "Ты все еще здесь? Любопытно. Либо ты действительно хочешь узнать концовку, либо моя ловушка вовлечения сработала. Или то и другое."
           },
           "transitions": [
             {
@@ -2750,7 +2750,7 @@
           "id": "tips_intro",
           "content": {
             "type": "text",
-            "value": "So, what can we do about it? Knowing... you know, that this is level 141 of this game."
+            "value": "Итак, что мы можем с этим сделать? Учитвая... ну, это уровень 141 этой игры."
           },
           "transitions": [
             {
@@ -2768,7 +2768,7 @@
           "id": "t142",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -2786,7 +2786,7 @@
           "id": "t143",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -2804,7 +2804,7 @@
           "id": "t144",
           "content": {
             "type": "text",
-            "value": "Life hack you need to know"
+            "value": "Лайфхак, который ты должен знать"
           },
           "transitions": [
             {
@@ -2822,7 +2822,7 @@
           "id": "tip1",
           "content": {
             "type": "text",
-            "value": "Tip 1: Delete these apps from your phone and only use them on desktop. Without the smooth glass glide, the hypnotic pull is way weaker."
+            "value": "Совет 1: Удали эти приложения с телефона и используй их только на десктопе. Без плавного скольжения пальца по стеклу, гипнотическая тяга намного слабее."
           },
           "transitions": [
             {
@@ -2840,7 +2840,7 @@
           "id": "t146",
           "content": {
             "type": "text",
-            "value": "Funny meme"
+            "value": "Смешной мем"
           },
           "transitions": [
             {
@@ -2858,7 +2858,7 @@
           "id": "t147",
           "content": {
             "type": "text",
-            "value": "Sponsored"
+            "value": "Реклама"
           },
           "transitions": [
             {
@@ -2876,7 +2876,7 @@
           "id": "t148",
           "content": {
             "type": "text",
-            "value": "Dog does a trick"
+            "value": "Собака выполняет трюк"
           },
           "transitions": [
             {
@@ -2894,7 +2894,7 @@
           "id": "tip2",
           "content": {
             "type": "text",
-            "value": "Tip 2: Terminal Cues. Set an external timer — an oven timer, a clock, anything. The infinite scroll lacks a 'done' signal. A loud beep gives your brain the completion cue it needs to stop."
+            "value": "Совет 2: Установи внешний таймер - духовка, часы, что угодно. Бесконечный скроллинг лишен сигнала 'стоп'. Будильник дает мозгу сигнал завершения, который ему нужен, чтобы остановиться."
           },
           "transitions": [
             {
@@ -2912,7 +2912,7 @@
           "id": "t150",
           "content": {
             "type": "text",
-            "value": "Satisfying loop"
+            "value": "Бесконечное видео"
           },
           "transitions": [
             {
@@ -2930,7 +2930,7 @@
           "id": "t151",
           "content": {
             "type": "text",
-            "value": "Someone talking about their day"
+            "value": "Кто-то рассказывает о своем дне"
           },
           "transitions": [
             {
@@ -2948,7 +2948,7 @@
           "id": "t152",
           "content": {
             "type": "text",
-            "value": "Unpopular opinion thread"
+            "value": "Тред с непопулярным мнением"
           },
           "transitions": [
             {
@@ -2966,7 +2966,7 @@
           "id": "tip3",
           "content": {
             "type": "text",
-            "value": "Tip 3: Put a rubber band around your phone. The physical bump forces a split-second of thought: 'Why am I picking this up?' Also it makes it less convinient to scroll."
+            "value": "Совет 3: Оберни телефон резинкой. Физическое препятствие заставляет на долю секунды подумать: 'Зачем я это делаю?' Плюс, скроллить становится менее удобно."
           },
           "transitions": [
             {
@@ -2984,7 +2984,7 @@
           "id": "t154",
           "content": {
             "type": "text",
-            "value": "Cute baby animal compilation"
+            "value": "Подборка милых детенышей животных"
           },
           "transitions": [
             {
@@ -3002,7 +3002,7 @@
           "id": "t155",
           "content": {
             "type": "text",
-            "value": "5-minute pasta recipe"
+            "value": "Рецепт пасты за 5 минут"
           },
           "transitions": [
             {
@@ -3020,7 +3020,7 @@
           "id": "t156",
           "content": {
             "type": "text",
-            "value": "ASMR triggers for relaxation"
+            "value": "ASMR триггеры для расслабления"
           },
           "transitions": [
             {
@@ -3038,7 +3038,7 @@
           "id": "tip4",
           "content": {
             "type": "text",
-            "value": "Tip 4: Cognitive Behavioral Therapy. Notice when you're scrolling to escape boredom or anxiety."
+            "value": "Совет 4: Когнитивно-поведенческая терапия. Замечай, когда ты скроллишь, чтобы сбежать от скуки или тревоги."
           },
           "transitions": [
             {
@@ -3056,7 +3056,7 @@
           "id": "t158",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -3074,7 +3074,7 @@
           "id": "t159",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -3092,7 +3092,7 @@
           "id": "t160",
           "content": {
             "type": "text",
-            "value": "Life hack you need to know"
+            "value": "Лайфхак, который ты должен знать"
           },
           "transitions": [
             {
@@ -3110,7 +3110,7 @@
           "id": "tip5",
           "content": {
             "type": "text",
-            "value": "Tip 5: If you're a parent, your screen habits directly shape your kids'. Create tech-free zones — dinner table, bedrooms — and model the behavior you want them to learn."
+            "value": "Совет 5: Если ты родитель, твое привычки напрямую формируют привычки детей. Создай зоны без технологий - обеденный стол, спальни - и моделируй поведение, которое ты хочешь, чтобы они усвоили."
           },
           "transitions": [
             {
@@ -3128,7 +3128,7 @@
           "id": "vid_162",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -3146,7 +3146,7 @@
           "id": "vid_163",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -3164,7 +3164,7 @@
           "id": "vid_164",
           "content": {
             "type": "text",
-            "value": "Funny meme"
+            "value": "Смешной мем"
           },
           "transitions": [
             {
@@ -3182,7 +3182,7 @@
           "id": "ok_message",
           "content": {
             "type": "text",
-            "value": "Ok, I shared everything I had for today. Now you know. I hope you enjoyed this game and maybe it was even a bit useful. Enjoy the rest of the videos and have a good life!"
+            "value": "Ок, у меня всё на сегодня. Надеюсь, тебе понравилась эта игра и, может, она была даже немного полезной. Наслаждайся остальными видео и всего хорошего!"
           },
           "transitions": [
             {
@@ -3200,7 +3200,7 @@
           "id": "remaining_20",
           "content": {
             "type": "text",
-            "value": "Remaining videos: 20"
+            "value": "Осталось видео: 20"
           },
           "transitions": [
             {
@@ -3218,7 +3218,7 @@
           "id": "vid_167",
           "content": {
             "type": "text",
-            "value": "Dog does a trick"
+            "value": "Собака выполняет трюк"
           },
           "transitions": [
             {
@@ -3236,7 +3236,7 @@
           "id": "vid_168",
           "content": {
             "type": "text",
-            "value": "Life hack you need to know"
+            "value": "Лайфхак, который ты должен знать"
           },
           "transitions": [
             {
@@ -3254,7 +3254,7 @@
           "id": "vid_169",
           "content": {
             "type": "text",
-            "value": "Satisfying loop"
+            "value": "Бесконечное видео"
           },
           "transitions": [
             {
@@ -3272,7 +3272,7 @@
           "id": "vid_170",
           "content": {
             "type": "text",
-            "value": "Someone talking about their day"
+            "value": "Кто-то рассказывает о своем дне"
           },
           "transitions": [
             {
@@ -3290,7 +3290,7 @@
           "id": "vid_171",
           "content": {
             "type": "text",
-            "value": "5-minute pasta recipe"
+            "value": "Рецепт пасты за 5 минут"
           },
           "transitions": [
             {
@@ -3308,7 +3308,7 @@
           "id": "vid_172",
           "content": {
             "type": "text",
-            "value": "Cute baby animal compilation"
+            "value": "Подборка милых детенышей животных"
           },
           "transitions": [
             {
@@ -3326,7 +3326,7 @@
           "id": "vid_173",
           "content": {
             "type": "text",
-            "value": "ASMR triggers for relaxation"
+            "value": "ASMR триггеры для расслабления"
           },
           "transitions": [
             {
@@ -3344,7 +3344,7 @@
           "id": "vid_174",
           "content": {
             "type": "text",
-            "value": "Unpopular opinion thread"
+            "value": "Тред с непопулярным мнением"
           },
           "transitions": [
             {
@@ -3362,7 +3362,7 @@
           "id": "vid_175",
           "content": {
             "type": "text",
-            "value": "Multiple cats together"
+            "value": "Несколько котов вместе"
           },
           "transitions": [
             {
@@ -3380,7 +3380,7 @@
           "id": "vid_176",
           "content": {
             "type": "text",
-            "value": "Everyone is doing this"
+            "value": "Все это делают"
           },
           "transitions": [
             {
@@ -3398,7 +3398,7 @@
           "id": "remaining_10",
           "content": {
             "type": "text",
-            "value": "Remaining videos: 10"
+            "value": "Осталось видео: 10"
           },
           "transitions": [
             {
@@ -3416,7 +3416,7 @@
           "id": "vid_178",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -3434,7 +3434,7 @@
           "id": "vid_179",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -3452,7 +3452,7 @@
           "id": "vid_180",
           "content": {
             "type": "text",
-            "value": "Dog does a trick"
+            "value": "Собака выполняет трюк"
           },
           "transitions": [
             {
@@ -3470,7 +3470,7 @@
           "id": "vid_181",
           "content": {
             "type": "text",
-            "value": "Funny meme"
+            "value": "Смешной мем"
           },
           "transitions": [
             {
@@ -3488,7 +3488,7 @@
           "id": "vid_182",
           "content": {
             "type": "text",
-            "value": "Life hack you need to know"
+            "value": "Лайфхак, который ты должен знать"
           },
           "transitions": [
             {
@@ -3506,7 +3506,7 @@
           "id": "remaining_5",
           "content": {
             "type": "text",
-            "value": "Remaining videos: 5"
+            "value": "Осталось видео: 5"
           },
           "transitions": [
             {
@@ -3524,7 +3524,7 @@
           "id": "vid_184",
           "content": {
             "type": "text",
-            "value": "Cat video"
+            "value": "Видео с котом"
           },
           "transitions": [
             {
@@ -3542,7 +3542,7 @@
           "id": "vid_185",
           "content": {
             "type": "text",
-            "value": "Dance challenge"
+            "value": "Танцевальный челлендж"
           },
           "transitions": [
             {
@@ -3560,7 +3560,7 @@
           "id": "vid_186",
           "content": {
             "type": "text",
-            "value": "Dog does a trick"
+            "value": "Собака выполняет трюк"
           },
           "transitions": [
             {
@@ -3578,7 +3578,7 @@
           "id": "vid_187",
           "content": {
             "type": "text",
-            "value": "Funny meme"
+            "value": "Смешной мем"
           },
           "transitions": [
             {
@@ -3596,7 +3596,7 @@
           "id": "last_video_prompt",
           "content": {
             "type": "text",
-            "value": "Your last video. Are you ready?"
+            "value": "Сейчас будет последнее видео..."
           },
           "transitions": [
             {
@@ -3614,7 +3614,7 @@
           "id": "sponsored_final",
           "content": {
             "type": "text",
-            "value": "Sponsored"
+            "value": "Реклама"
           },
           "transitions": [
             {
@@ -3632,7 +3632,7 @@
           "id": "the_end_real",
           "content": {
             "type": "text",
-            "value": "THE END (for real). P.S. The cat and dog were not actually killed for this game. They are completely fine, don't worry."
+            "value": "КОНЕЦ (по-настоящему). P.S. Кота и собаку на самом деле не убивали для этой игры, не волнуйся."
           },
           "transitions": []
         }

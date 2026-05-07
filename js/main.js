@@ -5,7 +5,7 @@
   const versionParam = params.get("version");
   
   // Whitelist acceptable versions
-  const validVersions = ["demo", "game"];
+  const validVersions = ["demo", "game", "game_ru"];
   
   if (!validVersions.includes(versionParam)) {
     // Show version selector menu
@@ -16,7 +16,15 @@
     html += `<div style="display: flex; flex-direction: column; gap: 15px;">`;
     validVersions.forEach(v => {
       const isDev = params.get("dev") === "true" ? "&dev=true" : "";
-      html += `<button onclick="window.location.href='?version=${v}${isDev}'">Play ${v.toUpperCase()}</button>`;
+      let displayName = v.toUpperCase();
+      if (v === "game_ru") {
+        displayName = "GAME (Русский)";
+      } else if (v === "game") {
+        displayName = "GAME (English)";
+      } else if (v === "demo") {
+        displayName = "DEMO";
+      }
+      html += `<button onclick="window.location.href='?version=${v}${isDev}'">Play ${displayName}</button>`;
     });
     html += `</div>`;
     
