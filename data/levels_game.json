@@ -7,7 +7,25 @@
           "id": "start",
           "content": {
             "type": "text",
-            "value": "Welcome to the Game."
+            "value": "You know what to do"
+          },
+          "transitions": [
+            {
+              "event": "auto_fade",
+              "target": "hint",
+              "delay": 10000
+            },
+            {
+              "event": "swipe_up",
+              "target": "level_02"
+            }
+          ]
+        },
+        "hint": {
+          "id": "hint",
+          "content": {
+            "type": "text",
+            "value": "👆"
           },
           "transitions": [
             {
@@ -19,13 +37,3620 @@
       }
     },
     "level_02": {
-      "initial": "intro",
+      "initial": "cat",
       "nodes": {
-        "intro": {
-          "id": "intro",
+        "cat": {
+          "id": "cat",
           "content": {
             "type": "text",
-            "value": "More levels coming soon..."
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_03"
+            }
+          ]
+        }
+      }
+    },
+    "level_03": {
+      "initial": "recipe",
+      "nodes": {
+        "recipe": {
+          "id": "recipe",
+          "content": {
+            "type": "text",
+            "value": "5-minute pasta recipe"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_04"
+            }
+          ]
+        }
+      }
+    },
+    "level_04": {
+      "initial": "ad",
+      "nodes": {
+        "ad": {
+          "id": "ad",
+          "content": {
+            "type": "text",
+            "value": "Sponsored"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_05"
+            }
+          ]
+        }
+      }
+    },
+    "level_05": {
+      "initial": "meme",
+      "nodes": {
+        "meme": {
+          "id": "meme",
+          "content": {
+            "type": "text",
+            "value": "Funny meme"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_06"
+            }
+          ]
+        }
+      }
+    },
+    "level_06": {
+      "initial": "loading",
+      "nodes": {
+        "loading": {
+          "id": "loading",
+          "content": {
+            "type": "text",
+            "value": "Loading..."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_07"
+            }
+          ]
+        }
+      }
+    },
+    "level_07": {
+      "initial": "boring",
+      "nodes": {
+        "boring": {
+          "id": "boring",
+          "content": {
+            "type": "text",
+            "value": "Someone talking about their day"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_08"
+            }
+          ]
+        }
+      }
+    },
+    "level_08": {
+      "initial": "lifehack",
+      "nodes": {
+        "lifehack": {
+          "id": "lifehack",
+          "content": {
+            "type": "text",
+            "value": "Life hack you need to know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "wait_thought"
+            }
+          ]
+        },
+        "wait_thought": {
+          "id": "wait_thought",
+          "content": {
+            "type": "text",
+            "value": "Oh there was something interesting"
+          },
+          "transitions": [
+            {
+              "event": "swipe_down",
+              "target": "went_back"
+            },
+            {
+              "event": "swipe_up",
+              "target": "no_go_back"
+            }
+          ]
+        },
+        "no_go_back": {
+          "id": "no_go_back",
+          "content": {
+            "type": "text",
+            "value": "No, no, go back"
+          },
+          "transitions": [
+            {
+              "event": "swipe_down",
+              "target": "went_back"
+            }
+          ]
+        },
+        "went_back": {
+          "id": "went_back",
+          "content": {
+            "type": "text",
+            "value": "Nevermind"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_09"
+            }
+          ]
+        }
+      }
+    },
+    "level_09": {
+      "initial": "dance",
+      "nodes": {
+        "dance": {
+          "id": "dance",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_10"
+            }
+          ]
+        }
+      }
+    },
+    "level_10": {
+      "initial": "dog",
+      "nodes": {
+        "dog": {
+          "id": "dog",
+          "content": {
+            "type": "text",
+            "value": "Dog does a trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_11"
+            }
+          ]
+        }
+      }
+    },
+    "level_11": {
+      "initial": "same_dog",
+      "nodes": {
+        "same_dog": {
+          "id": "same_dog",
+          "content": {
+            "type": "text",
+            "value": "Same dog, different trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_12"
+            }
+          ]
+        }
+      }
+    },
+    "level_12": {
+      "initial": "autoplay",
+      "nodes": {
+        "autoplay": {
+          "id": "autoplay",
+          "content": {
+            "type": "text",
+            "value": "Satisfying loop"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_13"
+            },
+            {
+              "event": "auto_swipe_up",
+              "target": "level_13",
+              "delay": 1000
+            }
+          ]
+        }
+      }
+    },
+    "level_13": {
+      "initial": "notification",
+      "nodes": {
+        "notification": {
+          "id": "notification",
+          "content": {
+            "type": "text",
+            "value": "You have 3 new notifications"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_14"
+            },
+            {
+              "event": "swipe_left",
+              "target": "ignored"
+            }
+          ]
+        },
+        "ignored": {
+          "id": "ignored",
+          "content": {
+            "type": "text",
+            "value": "Later"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_14"
+            }
+          ]
+        }
+      }
+    },
+    "level_14": {
+      "initial": "keepgoing",
+      "nodes": {
+        "keepgoing": {
+          "id": "keepgoing",
+          "content": {
+            "type": "text",
+            "value": "Keep scrolling"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_15"
+            }
+          ]
+        }
+      }
+    },
+    "level_15": {
+      "initial": "dogs",
+      "nodes": {
+        "dogs": {
+          "id": "dogs",
+          "content": {
+            "type": "text",
+            "value": "Dogs"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_16"
+            }
+          ]
+        }
+      }
+    },
+    "level_16": {
+      "initial": "question",
+      "nodes": {
+        "question": {
+          "id": "question",
+          "content": {
+            "type": "text",
+            "value": "Are you tired of scrolling?"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "solution"
+            }
+          ]
+        },
+        "solution": {
+          "id": "solution",
+          "content": {
+            "type": "text",
+            "value": "Let's enable autoscroll"
+          },
+          "transitions": [
+            {
+              "event": "auto_swipe_up",
+              "target": "level_17",
+              "delay": 1000
+            }
+          ]
+        }
+      }
+    },
+    "level_17": {
+      "initial": "auto1",
+      "nodes": {
+        "auto1": {
+          "id": "auto1",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "auto_swipe_up",
+              "target": "level_18",
+              "delay": 1000
+            }
+          ]
+        }
+      }
+    },
+    "level_18": {
+      "initial": "auto2",
+      "nodes": {
+        "auto2": {
+          "id": "auto2",
+          "content": {
+            "type": "text",
+            "value": "5-minute pasta recipe"
+          },
+          "transitions": [
+            {
+              "event": "auto_swipe_up",
+              "target": "level_19",
+              "delay": 1000
+            }
+          ]
+        }
+      }
+    },
+    "level_19": {
+      "initial": "auto3",
+      "nodes": {
+        "auto3": {
+          "id": "auto3",
+          "content": {
+            "type": "text",
+            "value": "Sponsored"
+          },
+          "transitions": [
+            {
+              "event": "auto_swipe_up",
+              "target": "level_20",
+              "delay": 1000
+            }
+          ]
+        }
+      }
+    },
+    "level_20": {
+      "initial": "auto4",
+      "nodes": {
+        "auto4": {
+          "id": "auto4",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "auto_swipe_up",
+              "target": "level_21",
+              "delay": 1000
+            }
+          ]
+        }
+      }
+    },
+    "level_21": {
+      "initial": "auto5",
+      "nodes": {
+        "auto5": {
+          "id": "auto5",
+          "content": {
+            "type": "text",
+            "value": "Dog does a trick"
+          },
+          "transitions": [
+            {
+              "event": "auto_swipe_up",
+              "target": "level_22",
+              "delay": 1000
+            }
+          ]
+        }
+      }
+    },
+    "level_22": {
+      "initial": "realization",
+      "nodes": {
+        "realization": {
+          "id": "realization",
+          "content": {
+            "type": "text",
+            "value": "No. That's... boring?"
+          },
+          "transitions": [
+            {
+              "event": "auto_fade",
+              "target": "back_to_manual",
+              "delay": 1000
+            }
+          ]
+        },
+        "back_to_manual": {
+          "id": "back_to_manual",
+          "content": {
+            "type": "text",
+            "value": "Returning to manual labor..."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_23"
+            }
+          ]
+        }
+      }
+    },
+    "level_23": {
+      "initial": "manual1",
+      "nodes": {
+        "manual1": {
+          "id": "manual1",
+          "content": {
+            "type": "text",
+            "value": "Funny meme"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_24"
+            }
+          ]
+        }
+      }
+    },
+    "level_24": {
+      "initial": "manual2",
+      "nodes": {
+        "manual2": {
+          "id": "manual2",
+          "content": {
+            "type": "text",
+            "value": "Life hack you need to know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_25"
+            }
+          ]
+        }
+      }
+    },
+    "level_25": {
+      "initial": "manual3",
+      "nodes": {
+        "manual3": {
+          "id": "manual3",
+          "content": {
+            "type": "text",
+            "value": "Someone talking about their day"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_26"
+            }
+          ]
+        }
+      }
+    },
+    "level_26": {
+      "initial": "manual4",
+      "nodes": {
+        "manual4": {
+          "id": "manual4",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_27"
+            }
+          ]
+        }
+      }
+    },
+    "level_27": {
+      "initial": "manual5",
+      "nodes": {
+        "manual5": {
+          "id": "manual5",
+          "content": {
+            "type": "text",
+            "value": "Multiple cats together"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_28"
+            }
+          ]
+        }
+      }
+    },
+    "level_28": {
+      "initial": "hey",
+      "nodes": {
+        "hey": {
+          "id": "hey",
+          "content": {
+            "type": "text",
+            "value": "Hey"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_29"
+            }
+          ]
+        }
+      }
+    },
+    "level_29": {
+      "initial": "check",
+      "nodes": {
+        "check": {
+          "id": "check",
+          "content": {
+            "type": "text",
+            "value": "Are you still here?"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_30"
+            }
+          ]
+        }
+      }
+    },
+    "level_30": {
+      "initial": "content1",
+      "nodes": {
+        "content1": {
+          "id": "content1",
+          "content": {
+            "type": "text",
+            "value": "Satisfying loop"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_31"
+            }
+          ]
+        }
+      }
+    },
+    "level_31": {
+      "initial": "content2",
+      "nodes": {
+        "content2": {
+          "id": "content2",
+          "content": {
+            "type": "text",
+            "value": "Dog does a trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_32"
+            }
+          ]
+        }
+      }
+    },
+    "level_32": {
+      "initial": "content3",
+      "nodes": {
+        "content3": {
+          "id": "content3",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_33"
+            }
+          ]
+        }
+      }
+    },
+    "level_33": {
+      "initial": "question1",
+      "nodes": {
+        "question1": {
+          "id": "question1",
+          "content": {
+            "type": "text",
+            "value": "Honestly I don't know what you are expecting to find"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_34"
+            }
+          ]
+        }
+      }
+    },
+    "level_34": {
+      "initial": "question2",
+      "nodes": {
+        "question2": {
+          "id": "question2",
+          "content": {
+            "type": "text",
+            "value": "Do you think there is the end?"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_35"
+            }
+          ]
+        }
+      }
+    },
+    "level_35": {
+      "initial": "content4",
+      "nodes": {
+        "content4": {
+          "id": "content4",
+          "content": {
+            "type": "text",
+            "value": "Sponsored"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_36"
+            }
+          ]
+        }
+      }
+    },
+    "level_36": {
+      "initial": "content5",
+      "nodes": {
+        "content5": {
+          "id": "content5",
+          "content": {
+            "type": "text",
+            "value": "5-minute pasta recipe"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_37"
+            }
+          ]
+        }
+      }
+    },
+    "level_37": {
+      "initial": "content6",
+      "nodes": {
+        "content6": {
+          "id": "content6",
+          "content": {
+            "type": "text",
+            "value": "Life hack you need to know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_38"
+            }
+          ]
+        }
+      }
+    },
+    "level_38": {
+      "initial": "threat1",
+      "nodes": {
+        "threat1": {
+          "id": "threat1",
+          "content": {
+            "type": "text",
+            "value": "I could make it an infinite loop, you know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_39"
+            }
+          ]
+        }
+      }
+    },
+    "level_39": {
+      "initial": "threat2",
+      "nodes": {
+        "threat2": {
+          "id": "threat2",
+          "content": {
+            "type": "text",
+            "value": "I could make it an infinite loop, you know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_40"
+            }
+          ]
+        }
+      }
+    },
+    "level_40": {
+      "initial": "threat3",
+      "nodes": {
+        "threat3": {
+          "id": "threat3",
+          "content": {
+            "type": "text",
+            "value": "I could make it an infinite loop, you know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_41"
+            }
+          ]
+        }
+      }
+    },
+    "level_41": {
+      "initial": "relief",
+      "nodes": {
+        "relief": {
+          "id": "relief",
+          "content": {
+            "type": "text",
+            "value": "... I haven't. Yet."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_42"
+            }
+          ]
+        }
+      }
+    },
+    "level_42": {
+      "initial": "content7",
+      "nodes": {
+        "content7": {
+          "id": "content7",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_43"
+            }
+          ]
+        }
+      }
+    },
+    "level_43": {
+      "initial": "content8",
+      "nodes": {
+        "content8": {
+          "id": "content8",
+          "content": {
+            "type": "text",
+            "value": "Funny meme"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_44"
+            }
+          ]
+        }
+      }
+    },
+    "level_44": {
+      "initial": "content9",
+      "nodes": {
+        "content9": {
+          "id": "content9",
+          "content": {
+            "type": "text",
+            "value": "Someone talking about their day"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_45"
+            }
+          ]
+        }
+      }
+    },
+    "level_45": {
+      "initial": "the_end",
+      "nodes": {
+        "the_end": {
+          "id": "the_end",
+          "content": {
+            "type": "text",
+            "value": "THE END"
+          },
+          "transitions": [
+            {
+              "event": "auto_fade",
+              "target": "still_here",
+              "delay": 10000
+            }
+          ]
+        },
+        "still_here": {
+          "id": "still_here",
+          "content": {
+            "type": "text",
+            "value": "Why are you still here?"
+          },
+          "transitions": [
+            {
+              "event": "auto_fade",
+              "target": "seriously",
+              "delay": 10000
+            }
+          ]
+        },
+        "seriously": {
+          "id": "seriously",
+          "content": {
+            "type": "text",
+            "value": "This is THE END. There is no more videos. You did it. Congratulations."
+          },
+          "transitions": [
+            {
+              "event": "auto_fade",
+              "target": "no_seriously",
+              "delay": 10000
+            }
+          ]
+        },
+        "no_seriously": {
+          "id": "no_seriously",
+          "content": {
+            "type": "text",
+            "value": "No, seriously. You scrolled till the end. You won the game."
+          },
+          "transitions": [
+            {
+              "event": "auto_fade",
+              "target": "ugh",
+              "delay": 10000
+            }
+          ]
+        },
+        "ugh": {
+          "id": "ugh",
+          "content": {
+            "type": "text",
+            "value": "Ugh... ok, just 5 more minutes"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_46"
+            }
+          ]
+        }
+      }
+    },
+    "level_46": {
+      "initial": "back",
+      "nodes": {
+        "back": {
+          "id": "back",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_47"
+            }
+          ]
+        }
+      }
+    },
+    "level_47": {
+      "initial": "content1",
+      "nodes": {
+        "content1": {
+          "id": "content1",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_48"
+            }
+          ]
+        }
+      }
+    },
+    "level_48": {
+      "initial": "content2",
+      "nodes": {
+        "content2": {
+          "id": "content2",
+          "content": {
+            "type": "text",
+            "value": "Sponsored"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_49"
+            }
+          ]
+        }
+      }
+    },
+    "level_49": {
+      "initial": "content3",
+      "nodes": {
+        "content3": {
+          "id": "content3",
+          "content": {
+            "type": "text",
+            "value": "Life hack you need to know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_50"
+            }
+          ]
+        }
+      }
+    },
+    "level_50": {
+      "initial": "content4",
+      "nodes": {
+        "content4": {
+          "id": "content4",
+          "content": {
+            "type": "text",
+            "value": "Dog does a trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_51"
+            }
+          ]
+        }
+      }
+    },
+    "level_51": {
+      "initial": "content5",
+      "nodes": {
+        "content5": {
+          "id": "content5",
+          "content": {
+            "type": "text",
+            "value": "Everyone is doing this"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_52"
+            }
+          ]
+        }
+      }
+    },
+    "level_52": {
+      "initial": "ok",
+      "nodes": {
+        "ok": {
+          "id": "ok",
+          "content": {
+            "type": "text",
+            "value": "Ok"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_53"
+            }
+          ]
+        }
+      }
+    },
+    "level_53": {
+      "initial": "problem",
+      "nodes": {
+        "problem": {
+          "id": "problem",
+          "content": {
+            "type": "text",
+            "value": "You clearly have some kind of a scrolling problem"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_54"
+            }
+          ]
+        }
+      }
+    },
+    "level_54": {
+      "initial": "no_judgment",
+      "nodes": {
+        "no_judgment": {
+          "id": "no_judgment",
+          "content": {
+            "type": "text",
+            "value": "(no judgment)"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_55"
+            }
+          ]
+        }
+      }
+    },
+    "level_55": {
+      "initial": "happy",
+      "nodes": {
+        "happy": {
+          "id": "happy",
+          "content": {
+            "type": "text",
+            "value": "(in fact, I'm kinda happy... otherwise we wouldn't be talking right now)"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_56"
+            }
+          ]
+        }
+      }
+    },
+    "level_56": {
+      "initial": "question",
+      "nodes": {
+        "question": {
+          "id": "question",
+          "content": {
+            "type": "text",
+            "value": "Do you want to talk about it?"
+          },
+          "transitions": [
+            {
+              "event": "swipe_left",
+              "target": "rejected"
+            },
+            {
+              "event": "swipe_right",
+              "target": "accepted"
+            }
+          ]
+        },
+        "rejected": {
+          "id": "rejected",
+          "content": {
+            "type": "text",
+            "value": "Did you just swipe left on me!? :("
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_57"
+            }
+          ]
+        },
+        "accepted": {
+          "id": "accepted",
+          "content": {
+            "type": "text",
+            "value": "Great! It's the first step to healing, you know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_61"
+            }
+          ]
+        }
+      }
+    },
+    "level_57": {
+      "initial": "loop1",
+      "nodes": {
+        "loop1": {
+          "id": "loop1",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_58"
+            }
+          ]
+        }
+      }
+    },
+    "level_58": {
+      "initial": "loop2",
+      "nodes": {
+        "loop2": {
+          "id": "loop2",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_59"
+            }
+          ]
+        }
+      }
+    },
+    "level_59": {
+      "initial": "loop3",
+      "nodes": {
+        "loop3": {
+          "id": "loop3",
+          "content": {
+            "type": "text",
+            "value": "Sponsored"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_60"
+            }
+          ]
+        }
+      }
+    },
+    "level_60": {
+      "initial": "ask_again",
+      "nodes": {
+        "ask_again": {
+          "id": "ask_again",
+          "content": {
+            "type": "text",
+            "value": "So... do you want to talk about your scrolling problem?"
+          },
+          "transitions": [
+            {
+              "event": "swipe_left",
+              "target": "level_57"
+            },
+            {
+              "event": "swipe_right",
+              "target": "finally"
+            }
+          ]
+        },
+        "finally": {
+          "id": "finally",
+          "content": {
+            "type": "text",
+            "value": "Great! It's the first step to healing, you know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_61"
+            }
+          ]
+        }
+      }
+    },
+    "level_61": {
+      "initial": "cat1",
+      "nodes": {
+        "cat1": {
+          "id": "cat1",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_62"
+            }
+          ]
+        }
+      }
+    },
+    "level_62": {
+      "initial": "dance1",
+      "nodes": {
+        "dance1": {
+          "id": "dance1",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_63"
+            }
+          ]
+        }
+      }
+    },
+    "level_63": {
+      "initial": "wrong",
+      "nodes": {
+        "wrong": {
+          "id": "wrong",
+          "content": {
+            "type": "text",
+            "value": "Someone is wrong on the internet"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_64"
+            }
+          ]
+        }
+      }
+    },
+    "level_64": {
+      "initial": "fact_thumb",
+      "nodes": {
+        "fact_thumb": {
+          "id": "fact_thumb",
+          "content": {
+            "type": "text",
+            "value": "Fact: Your thumb lives in the 'natural zone' of the screen 96% of the time. 75% of people navigate with one thumb, 49% hold the phone one-handed. Swiping up is the most efficient movement—it takes less effort than stopping. It's literally easier to keep going."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_65"
+            }
+          ]
+        }
+      }
+    },
+    "level_65": {
+      "initial": "dog1",
+      "nodes": {
+        "dog1": {
+          "id": "dog1",
+          "content": {
+            "type": "text",
+            "value": "Dog does a trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_66"
+            }
+          ]
+        }
+      }
+    },
+    "level_66": {
+      "initial": "lifehack1",
+      "nodes": {
+        "lifehack1": {
+          "id": "lifehack1",
+          "content": {
+            "type": "text",
+            "value": "Life hack you need to know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_67"
+            }
+          ]
+        }
+      }
+    },
+    "level_67": {
+      "initial": "sponsored1",
+      "nodes": {
+        "sponsored1": {
+          "id": "sponsored1",
+          "content": {
+            "type": "text",
+            "value": "Sponsored"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_68"
+            }
+          ]
+        }
+      }
+    },
+    "level_68": {
+      "initial": "meme1",
+      "nodes": {
+        "meme1": {
+          "id": "meme1",
+          "content": {
+            "type": "text",
+            "value": "Funny meme"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_69"
+            }
+          ]
+        }
+      }
+    },
+    "level_69": {
+      "initial": "fact_visual",
+      "nodes": {
+        "fact_visual": {
+          "id": "fact_visual",
+          "content": {
+            "type": "text",
+            "value": "Fact: The vertical feed fills your entire screen, wiping out distractions. Eye-tracking shows you focus on the top 60% of the screen for the video, while the bottom third is reserved for your thumb to scroll. Creators put hooks at the top and buttons at the bottom—a 'high-flow' environment where your eyes and hand work in perfect sync."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_70"
+            }
+          ]
+        }
+      }
+    },
+    "level_70": {
+      "initial": "soap",
+      "nodes": {
+        "soap": {
+          "id": "soap",
+          "content": {
+            "type": "text",
+            "value": "Satisfying soap cutting"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_71"
+            }
+          ]
+        }
+      }
+    },
+    "level_71": {
+      "initial": "baby",
+      "nodes": {
+        "baby": {
+          "id": "baby",
+          "content": {
+            "type": "text",
+            "value": "Cute baby animal compilation"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_72"
+            }
+          ]
+        }
+      }
+    },
+    "level_72": {
+      "initial": "dance2",
+      "nodes": {
+        "dance2": {
+          "id": "dance2",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_73"
+            }
+          ]
+        }
+      }
+    },
+    "level_73": {
+      "initial": "boring1",
+      "nodes": {
+        "boring1": {
+          "id": "boring1",
+          "content": {
+            "type": "text",
+            "value": "Someone talking about their day"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_74"
+            }
+          ]
+        }
+      }
+    },
+    "level_74": {
+      "initial": "fact_grid",
+      "nodes": {
+        "fact_grid": {
+          "id": "fact_grid",
+          "content": {
+            "type": "text",
+            "value": "Fact: Creators use transparent grid overlays in editing apps to make sure their faces and text aren't covered by the app's UI. If a talking head gets buried under buttons, conversion rates can drop 30%. They literally design around the interface to keep you hooked."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_75"
+            }
+          ]
+        }
+      }
+    },
+    "level_75": {
+      "initial": "opinion",
+      "nodes": {
+        "opinion": {
+          "id": "opinion",
+          "content": {
+            "type": "text",
+            "value": "Unpopular opinion thread"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_76"
+            }
+          ]
+        }
+      }
+    },
+    "level_76": {
+      "initial": "cat2",
+      "nodes": {
+        "cat2": {
+          "id": "cat2",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_77"
+            }
+          ]
+        }
+      }
+    },
+    "level_77": {
+      "initial": "dog2",
+      "nodes": {
+        "dog2": {
+          "id": "dog2",
+          "content": {
+            "type": "text",
+            "value": "Dog does a trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_78"
+            }
+          ]
+        }
+      }
+    },
+    "level_78": {
+      "initial": "fact_150ms",
+      "nodes": {
+        "fact_150ms": {
+          "id": "fact_150ms",
+          "content": {
+            "type": "text",
+            "value": "Fact: NYU researchers found your brain processes a short sentence in about 150 milliseconds—as fast as a visual scene. That's why text overlays on TikToks work: you've already read them before you even realize you're looking at words. Sneaky, right?"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_79"
+            }
+          ]
+        }
+      }
+    },
+    "level_79": {
+      "initial": "asmr",
+      "nodes": {
+        "asmr": {
+          "id": "asmr",
+          "content": {
+            "type": "text",
+            "value": "ASMR triggers for relaxation"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_80"
+            }
+          ]
+        }
+      }
+    },
+    "level_80": {
+      "initial": "fact_variable",
+      "nodes": {
+        "fact_variable": {
+          "id": "fact_variable",
+          "content": {
+            "type": "text",
+            "value": "Notice what I just did? I've been spacing out these facts unpredictably—sometimes after three videos, sometimes after five, sometimes just one. That's variable ratio reinforcement. It's exactly how slot machines keep you pulling the lever. And here you are, still swiping."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_81"
+            }
+          ]
+        }
+      }
+    },
+    "level_81": {
+      "initial": "neutral1",
+      "nodes": {
+        "neutral1": {
+          "id": "neutral1",
+          "content": {
+            "type": "text",
+            "value": "5-minute pasta recipe"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_82"
+            }
+          ]
+        }
+      }
+    },
+    "level_82": {
+      "initial": "neutral2",
+      "nodes": {
+        "neutral2": {
+          "id": "neutral2",
+          "content": {
+            "type": "text",
+            "value": "Funny meme"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_83"
+            }
+          ]
+        }
+      }
+    },
+    "level_83": {
+      "initial": "choice",
+      "nodes": {
+        "choice": {
+          "id": "choice",
+          "content": {
+            "type": "text",
+            "value": "TikTok works out if you liked a video by how long you pause, how fast you swipe, whether you rewatch. I'm just a simple game – I don't track your reaction time. So please help me out: do you prefer cats (swipe left) or dogs (swipe right)?"
+          },
+          "transitions": [
+            {
+              "event": "swipe_left",
+              "target": "level_84"
+            },
+            {
+              "event": "swipe_right",
+              "target": "level_94"
+            }
+          ]
+        }
+      }
+    },
+    "level_84": {
+      "initial": "cat1",
+      "nodes": {
+        "cat1": {
+          "id": "cat1",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_85"
+            }
+          ]
+        }
+      }
+    },
+    "level_85": {
+      "initial": "cat2",
+      "nodes": {
+        "cat2": {
+          "id": "cat2",
+          "content": {
+            "type": "text",
+            "value": "Kitten tries to jump"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_86"
+            }
+          ]
+        }
+      }
+    },
+    "level_86": {
+      "initial": "cat3_non",
+      "nodes": {
+        "cat3_non": {
+          "id": "cat3_non",
+          "content": {
+            "type": "text",
+            "value": "Life hack you need to know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_87"
+            }
+          ]
+        }
+      }
+    },
+    "level_87": {
+      "initial": "cat4",
+      "nodes": {
+        "cat4": {
+          "id": "cat4",
+          "content": {
+            "type": "text",
+            "value": "Cat compilation #47"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_88"
+            }
+          ]
+        }
+      }
+    },
+    "level_88": {
+      "initial": "cat_ad",
+      "nodes": {
+        "cat_ad": {
+          "id": "cat_ad",
+          "content": {
+            "type": "text",
+            "value": "Sponsored: Cat subscription box"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_89"
+            }
+          ]
+        }
+      }
+    },
+    "level_89": {
+      "initial": "cat5",
+      "nodes": {
+        "cat5": {
+          "id": "cat5",
+          "content": {
+            "type": "text",
+            "value": "Sleeping cat in weird positions"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_90"
+            }
+          ]
+        }
+      }
+    },
+    "level_90": {
+      "initial": "cat6_non",
+      "nodes": {
+        "cat6_non": {
+          "id": "cat6_non",
+          "content": {
+            "type": "text",
+            "value": "Dog does a trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_91"
+            }
+          ]
+        }
+      }
+    },
+    "level_91": {
+      "initial": "cat7",
+      "nodes": {
+        "cat7": {
+          "id": "cat7",
+          "content": {
+            "type": "text",
+            "value": "Cat vs. laser pointer"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_92"
+            }
+          ]
+        }
+      }
+    },
+    "level_92": {
+      "initial": "cat8_non",
+      "nodes": {
+        "cat8_non": {
+          "id": "cat8_non",
+          "content": {
+            "type": "text",
+            "value": "Someone talking about their day"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_93"
+            }
+          ]
+        }
+      }
+    },
+    "level_93": {
+      "initial": "cat_end",
+      "nodes": {
+        "cat_end": {
+          "id": "cat_end",
+          "content": {
+            "type": "text",
+            "value": "Cat gets killed"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_104"
+            }
+          ]
+        }
+      }
+    },
+    "level_94": {
+      "initial": "dog1",
+      "nodes": {
+        "dog1": {
+          "id": "dog1",
+          "content": {
+            "type": "text",
+            "value": "Dog does a trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_95"
+            }
+          ]
+        }
+      }
+    },
+    "level_95": {
+      "initial": "dog2",
+      "nodes": {
+        "dog2": {
+          "id": "dog2",
+          "content": {
+            "type": "text",
+            "value": "Puppy compilation"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_96"
+            }
+          ]
+        }
+      }
+    },
+    "level_96": {
+      "initial": "dog_ad",
+      "nodes": {
+        "dog_ad": {
+          "id": "dog_ad",
+          "content": {
+            "type": "text",
+            "value": "Sponsored: Dog grooming products"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_97"
+            }
+          ]
+        }
+      }
+    },
+    "level_97": {
+      "initial": "dog3_non",
+      "nodes": {
+        "dog3_non": {
+          "id": "dog3_non",
+          "content": {
+            "type": "text",
+            "value": "Funny meme"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_98"
+            }
+          ]
+        }
+      }
+    },
+    "level_98": {
+      "initial": "dog4",
+      "nodes": {
+        "dog4": {
+          "id": "dog4",
+          "content": {
+            "type": "text",
+            "value": "Dog reacts to magic trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_99"
+            }
+          ]
+        }
+      }
+    },
+    "level_99": {
+      "initial": "dog5_non",
+      "nodes": {
+        "dog5_non": {
+          "id": "dog5_non",
+          "content": {
+            "type": "text",
+            "value": "Life hack you need to know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_100"
+            }
+          ]
+        }
+      }
+    },
+    "level_100": {
+      "initial": "dog6",
+      "nodes": {
+        "dog6": {
+          "id": "dog6",
+          "content": {
+            "type": "text",
+            "value": "Dog agility course"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_101"
+            }
+          ]
+        }
+      }
+    },
+    "level_101": {
+      "initial": "dog7",
+      "nodes": {
+        "dog7": {
+          "id": "dog7",
+          "content": {
+            "type": "text",
+            "value": "Dog howling to music"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_102"
+            }
+          ]
+        }
+      }
+    },
+    "level_102": {
+      "initial": "dog8_non",
+      "nodes": {
+        "dog8_non": {
+          "id": "dog8_non",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_103"
+            }
+          ]
+        }
+      }
+    },
+    "level_103": {
+      "initial": "dog_end",
+      "nodes": {
+        "dog_end": {
+          "id": "dog_end",
+          "content": {
+            "type": "text",
+            "value": "Dog gets killed"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_104"
+            }
+          ]
+        }
+      }
+    },
+    "level_104": {
+      "initial": "algorithm_truth",
+      "nodes": {
+        "algorithm_truth": {
+          "id": "algorithm_truth",
+          "content": {
+            "type": "text",
+            "value": "Sorry. That was hard to watch, I know. But I had to illustrate the point: the algorithm doesn't show you what you like. It shows what keeps you engaged — what causes emotions."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_105"
+            }
+          ]
+        }
+      }
+    },
+    "level_105": {
+      "initial": "l105",
+      "nodes": {
+        "l105": {
+          "id": "l105",
+          "content": {
+            "type": "text",
+            "value": "BREAKING: Scientists Confirm Earth Is Flat and NASA Has Been Lying All Along!"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_106"
+            }
+          ]
+        }
+      }
+    },
+    "level_106": {
+      "initial": "l106",
+      "nodes": {
+        "l106": {
+          "id": "l106",
+          "content": {
+            "type": "text",
+            "value": "The REAL Reason Behind the War Will Make You FURIOUS!"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_107"
+            }
+          ]
+        }
+      }
+    },
+    "level_107": {
+      "initial": "neutral_01",
+      "nodes": {
+        "neutral_01": {
+          "id": "neutral_01",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_108"
+            }
+          ]
+        }
+      }
+    },
+    "level_108": {
+      "initial": "l108",
+      "nodes": {
+        "l108": {
+          "id": "l108",
+          "content": {
+            "type": "text",
+            "value": "Why YOUR Generation Is the Worst (and It's Not Up for Debate)"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_109"
+            }
+          ]
+        }
+      }
+    },
+    "level_109": {
+      "initial": "l109",
+      "nodes": {
+        "l109": {
+          "id": "l109",
+          "content": {
+            "type": "text",
+            "value": "This Celebrity Just Admitted They're Part of the Deep State"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_110"
+            }
+          ]
+        }
+      }
+    },
+    "level_110": {
+      "initial": "l110",
+      "nodes": {
+        "l110": {
+          "id": "l110",
+          "content": {
+            "type": "text",
+            "value": "Liberals Are Eating BUGS to Save the Planet – Are You Next?"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_111"
+            }
+          ]
+        }
+      }
+    },
+    "level_111": {
+      "initial": "l111",
+      "nodes": {
+        "l111": {
+          "id": "l111",
+          "content": {
+            "type": "text",
+            "value": "Death to Photoshop? This 'Real Beauty' Movement Is a LIE"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_112"
+            }
+          ]
+        }
+      }
+    },
+    "level_112": {
+      "initial": "l112",
+      "nodes": {
+        "l112": {
+          "id": "l112",
+          "content": {
+            "type": "text",
+            "value": "Why Vaccines Are Turning Frogs Gay – It's True This Time"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_113"
+            }
+          ]
+        }
+      }
+    },
+    "level_113": {
+      "initial": "neutral_02",
+      "nodes": {
+        "neutral_02": {
+          "id": "neutral_02",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_114"
+            }
+          ]
+        }
+      }
+    },
+    "level_114": {
+      "initial": "l114",
+      "nodes": {
+        "l114": {
+          "id": "l114",
+          "content": {
+            "type": "text",
+            "value": "You Won't Believe What This Priest Did (NSFW)"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_115"
+            }
+          ]
+        }
+      }
+    },
+    "level_115": {
+      "initial": "l115",
+      "nodes": {
+        "l115": {
+          "id": "l115",
+          "content": {
+            "type": "text",
+            "value": "The #1 Reason Your Marriage Will Fail (According to AI)"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_116"
+            }
+          ]
+        }
+      }
+    },
+    "level_116": {
+      "initial": "l116",
+      "nodes": {
+        "l116": {
+          "id": "l116",
+          "content": {
+            "type": "text",
+            "value": "Gender Reveal: God's Opinion – The Bible Weighs In"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_117"
+            }
+          ]
+        }
+      }
+    },
+    "level_117": {
+      "initial": "l117",
+      "nodes": {
+        "l117": {
+          "id": "l117",
+          "content": {
+            "type": "text",
+            "value": "LGBTQ Agenda EXPOSED: They're Coming for Your Kids' Lunchboxes"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_118"
+            }
+          ]
+        }
+      }
+    },
+    "level_118": {
+      "initial": "l118",
+      "nodes": {
+        "l118": {
+          "id": "l118",
+          "content": {
+            "type": "text",
+            "value": "How to Manipulate Anyone in 5 Simple Steps (Ethically?)"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_119"
+            }
+          ]
+        }
+      }
+    },
+    "level_119": {
+      "initial": "l119",
+      "nodes": {
+        "l119": {
+          "id": "l119",
+          "content": {
+            "type": "text",
+            "value": "The Holocaust Was Overrated? Shocking New Theory from a 'Historian'"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_120"
+            }
+          ]
+        }
+      }
+    },
+    "level_120": {
+      "initial": "l120",
+      "nodes": {
+        "l120": {
+          "id": "l120",
+          "content": {
+            "type": "text",
+            "value": "Hitler's Art School Rejection Letter Found – It's Embarrassing"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_121"
+            }
+          ]
+        }
+      }
+    },
+    "level_121": {
+      "initial": "l121",
+      "nodes": {
+        "l121": {
+          "id": "l121",
+          "content": {
+            "type": "text",
+            "value": "Jews Control the Weather? New Evidence from the Talmud"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_122"
+            }
+          ]
+        }
+      }
+    },
+    "level_122": {
+      "initial": "neutral_03",
+      "nodes": {
+        "neutral_03": {
+          "id": "neutral_03",
+          "content": {
+            "type": "text",
+            "value": "Life hack you need to know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_123"
+            }
+          ]
+        }
+      }
+    },
+    "level_123": {
+      "initial": "l123",
+      "nodes": {
+        "l123": {
+          "id": "l123",
+          "content": {
+            "type": "text",
+            "value": "COVID Was a Hoax Created by the Media to Sell Hand Sanitizer"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_124"
+            }
+          ]
+        }
+      }
+    },
+    "level_124": {
+      "initial": "l124",
+      "nodes": {
+        "l124": {
+          "id": "l124",
+          "content": {
+            "type": "text",
+            "value": "5G Towers Are Turning Birds into Government Drones – Proof Inside"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_125"
+            }
+          ]
+        }
+      }
+    },
+    "level_125": {
+      "initial": "l125",
+      "nodes": {
+        "l125": {
+          "id": "l125",
+          "content": {
+            "type": "text",
+            "value": "Chemtrails: The Chemicals Are Making You Dumb and the Frogs Gay"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_126"
+            }
+          ]
+        }
+      }
+    },
+    "level_126": {
+      "initial": "l126",
+      "nodes": {
+        "l126": {
+          "id": "l126",
+          "content": {
+            "type": "text",
+            "value": "This Child's Toy Is Actually A Spy Device – Here's How"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_127"
+            }
+          ]
+        }
+      }
+    },
+    "level_127": {
+      "initial": "l127",
+      "nodes": {
+        "l127": {
+          "id": "l127",
+          "content": {
+            "type": "text",
+            "value": "Aliens Built the Pyramids and the Government Won't Admit It"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_128"
+            }
+          ]
+        }
+      }
+    },
+    "level_128": {
+      "initial": "neutral_04",
+      "nodes": {
+        "neutral_04": {
+          "id": "neutral_04",
+          "content": {
+            "type": "text",
+            "value": "Sponsored: Something you don't need"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_129"
+            }
+          ]
+        }
+      }
+    },
+    "level_129": {
+      "initial": "l129",
+      "nodes": {
+        "l129": {
+          "id": "l129",
+          "content": {
+            "type": "text",
+            "value": "The Moon Landing Was Staged by Disney – Why Do We Believe This?"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_130"
+            }
+          ]
+        }
+      }
+    },
+    "level_130": {
+      "initial": "l130",
+      "nodes": {
+        "l130": {
+          "id": "l130",
+          "content": {
+            "type": "text",
+            "value": "Your Phone Is Spying on You Through Your Toothbrush – Details"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_131"
+            }
+          ]
+        }
+      }
+    },
+    "level_131": {
+      "initial": "l131",
+      "nodes": {
+        "l131": {
+          "id": "l131",
+          "content": {
+            "type": "text",
+            "value": "Cancel Culture Is Ruining Everything: Here's Why You're Next"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_132"
+            }
+          ]
+        }
+      }
+    },
+    "level_132": {
+      "initial": "l132",
+      "nodes": {
+        "l132": {
+          "id": "l132",
+          "content": {
+            "type": "text",
+            "value": "Why It's Actually GOOD to Be Selfish (According to Science)"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_133"
+            }
+          ]
+        }
+      }
+    },
+    "level_133": {
+      "initial": "l133",
+      "nodes": {
+        "l133": {
+          "id": "l133",
+          "content": {
+            "type": "text",
+            "value": "The 'Me Too' Movement Has Gone Too Far – My Unpopular Opinion"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_134"
+            }
+          ]
+        }
+      }
+    },
+    "level_134": {
+      "initial": "l134",
+      "nodes": {
+        "l134": {
+          "id": "l134",
+          "content": {
+            "type": "text",
+            "value": "Why I Quit Voting and You Should Too!"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_135"
+            }
+          ]
+        }
+      }
+    },
+    "level_135": {
+      "initial": "neutral_05",
+      "nodes": {
+        "neutral_05": {
+          "id": "neutral_05",
+          "content": {
+            "type": "text",
+            "value": "Cute baby animal compilation"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_136"
+            }
+          ]
+        }
+      }
+    },
+    "level_136": {
+      "initial": "l136",
+      "nodes": {
+        "l136": {
+          "id": "l136",
+          "content": {
+            "type": "text",
+            "value": "This ONE Food Is Going to Kill You by 50 – Doctors Hate It!"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_137"
+            }
+          ]
+        }
+      }
+    },
+    "level_137": {
+      "initial": "l137",
+      "nodes": {
+        "l137": {
+          "id": "l137",
+          "content": {
+            "type": "text",
+            "value": "The Secret to Immortality Hidden in This Ancient Text"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_138"
+            }
+          ]
+        }
+      }
+    },
+    "level_138": {
+      "initial": "l138",
+      "nodes": {
+        "l138": {
+          "id": "l138",
+          "content": {
+            "type": "text",
+            "value": "FEMINISM DESTROYED MODERN MEN – Here's the Data"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_139"
+            }
+          ]
+        }
+      }
+    },
+    "level_139": {
+      "initial": "l139",
+      "nodes": {
+        "l139": {
+          "id": "l139",
+          "content": {
+            "type": "text",
+            "value": "The Truth About Racism: It's Actually Over, Stop Whining"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_140"
+            }
+          ]
+        }
+      }
+    },
+    "level_140": {
+      "initial": "engagement_outro",
+      "nodes": {
+        "engagement_outro": {
+          "id": "engagement_outro",
+          "content": {
+            "type": "text",
+            "value": "You're still here, huh. Either you really want to know the ending of this game, or my engagement trap worked. Or both."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_141"
+            }
+          ]
+        }
+      }
+    },
+    "level_141": {
+      "initial": "tips_intro",
+      "nodes": {
+        "tips_intro": {
+          "id": "tips_intro",
+          "content": {
+            "type": "text",
+            "value": "So, what can we do about it? Knowing... you know, that this is level 141 of this game."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_142"
+            }
+          ]
+        }
+      }
+    },
+    "level_142": {
+      "initial": "t142",
+      "nodes": {
+        "t142": {
+          "id": "t142",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_143"
+            }
+          ]
+        }
+      }
+    },
+    "level_143": {
+      "initial": "t143",
+      "nodes": {
+        "t143": {
+          "id": "t143",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_144"
+            }
+          ]
+        }
+      }
+    },
+    "level_144": {
+      "initial": "t144",
+      "nodes": {
+        "t144": {
+          "id": "t144",
+          "content": {
+            "type": "text",
+            "value": "Life hack you need to know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_145"
+            }
+          ]
+        }
+      }
+    },
+    "level_145": {
+      "initial": "tip1",
+      "nodes": {
+        "tip1": {
+          "id": "tip1",
+          "content": {
+            "type": "text",
+            "value": "Tip 1: Haptic Decoupling. Delete these apps from your phone and only use them on desktop. Without the smooth glass glide, the hypnotic pull is way weaker. I'm less fun on a trackpad, and that's the point."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_146"
+            }
+          ]
+        }
+      }
+    },
+    "level_146": {
+      "initial": "t146",
+      "nodes": {
+        "t146": {
+          "id": "t146",
+          "content": {
+            "type": "text",
+            "value": "Funny meme"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_147"
+            }
+          ]
+        }
+      }
+    },
+    "level_147": {
+      "initial": "t147",
+      "nodes": {
+        "t147": {
+          "id": "t147",
+          "content": {
+            "type": "text",
+            "value": "Sponsored"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_148"
+            }
+          ]
+        }
+      }
+    },
+    "level_148": {
+      "initial": "t148",
+      "nodes": {
+        "t148": {
+          "id": "t148",
+          "content": {
+            "type": "text",
+            "value": "Dog does a trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_149"
+            }
+          ]
+        }
+      }
+    },
+    "level_149": {
+      "initial": "tip2",
+      "nodes": {
+        "tip2": {
+          "id": "tip2",
+          "content": {
+            "type": "text",
+            "value": "Tip 2: Terminal Cues. Set an external timer — an oven timer, a clock, anything. The infinite scroll lacks a 'done' signal. A loud beep gives your brain the completion cue it needs to stop."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_150"
+            }
+          ]
+        }
+      }
+    },
+    "level_150": {
+      "initial": "t150",
+      "nodes": {
+        "t150": {
+          "id": "t150",
+          "content": {
+            "type": "text",
+            "value": "Satisfying loop"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_151"
+            }
+          ]
+        }
+      }
+    },
+    "level_151": {
+      "initial": "t151",
+      "nodes": {
+        "t151": {
+          "id": "t151",
+          "content": {
+            "type": "text",
+            "value": "Someone talking about their day"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_152"
+            }
+          ]
+        }
+      }
+    },
+    "level_152": {
+      "initial": "t152",
+      "nodes": {
+        "t152": {
+          "id": "t152",
+          "content": {
+            "type": "text",
+            "value": "Unpopular opinion thread"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_153"
+            }
+          ]
+        }
+      }
+    },
+    "level_153": {
+      "initial": "tip3",
+      "nodes": {
+        "tip3": {
+          "id": "tip3",
+          "content": {
+            "type": "text",
+            "value": "Tip 3: Intentionality Reminders. Put a rubber band around your phone. The physical bump forces a split-second of thought: 'Why am I picking this up?' That tiny pause can break the autopilot."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_154"
+            }
+          ]
+        }
+      }
+    },
+    "level_154": {
+      "initial": "t154",
+      "nodes": {
+        "t154": {
+          "id": "t154",
+          "content": {
+            "type": "text",
+            "value": "Cute baby animal compilation"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_155"
+            }
+          ]
+        }
+      }
+    },
+    "level_155": {
+      "initial": "t155",
+      "nodes": {
+        "t155": {
+          "id": "t155",
+          "content": {
+            "type": "text",
+            "value": "5-minute pasta recipe"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_156"
+            }
+          ]
+        }
+      }
+    },
+    "level_156": {
+      "initial": "t156",
+      "nodes": {
+        "t156": {
+          "id": "t156",
+          "content": {
+            "type": "text",
+            "value": "ASMR triggers for relaxation"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_157"
+            }
+          ]
+        }
+      }
+    },
+    "level_157": {
+      "initial": "tip4",
+      "nodes": {
+        "tip4": {
+          "id": "tip4",
+          "content": {
+            "type": "text",
+            "value": "Tip 4: Cognitive Behavioral Therapy. Notice when you're scrolling to escape boredom or anxiety. Instead of treating it as a pastime, call it what it is: an emotional shield. Recognizing that pattern is the first step to breaking it."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_158"
+            }
+          ]
+        }
+      }
+    },
+    "level_158": {
+      "initial": "t158",
+      "nodes": {
+        "t158": {
+          "id": "t158",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_159"
+            }
+          ]
+        }
+      }
+    },
+    "level_159": {
+      "initial": "t159",
+      "nodes": {
+        "t159": {
+          "id": "t159",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_160"
+            }
+          ]
+        }
+      }
+    },
+    "level_160": {
+      "initial": "t160",
+      "nodes": {
+        "t160": {
+          "id": "t160",
+          "content": {
+            "type": "text",
+            "value": "Life hack you need to know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_161"
+            }
+          ]
+        }
+      }
+    },
+    "level_161": {
+      "initial": "tip5",
+      "nodes": {
+        "tip5": {
+          "id": "tip5",
+          "content": {
+            "type": "text",
+            "value": "Tip 5: Family Media Plans. If you're a parent, your screen habits directly shape your kids'. Create tech-free zones — dinner table, bedrooms — and model the behavior you want them to learn. Yes, that means no doom-scrolling at 2am in bed. Sorry."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_162"
+            }
+          ]
+        }
+      }
+    },
+    "level_162": {
+      "initial": "tips_outro",
+      "nodes": {
+        "tips_outro": {
+          "id": "tips_outro",
+          "content": {
+            "type": "text",
+            "value": "There. You now have five real strategies to stop. What you do next is up to you. I'll still be right here, looping cats and dogs if you ever feel like coming back. Swipe up to return to the void."
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_01"
+            }
+          ]
+        }
+      }
+    },
+    "level_162": {
+      "initial": "vid_162",
+      "nodes": {
+        "vid_162": {
+          "id": "vid_162",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_163"
+            }
+          ]
+        }
+      }
+    },
+    "level_163": {
+      "initial": "vid_163",
+      "nodes": {
+        "vid_163": {
+          "id": "vid_163",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_164"
+            }
+          ]
+        }
+      }
+    },
+    "level_164": {
+      "initial": "vid_164",
+      "nodes": {
+        "vid_164": {
+          "id": "vid_164",
+          "content": {
+            "type": "text",
+            "value": "Funny meme"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_165"
+            }
+          ]
+        }
+      }
+    },
+    "level_165": {
+      "initial": "ok_message",
+      "nodes": {
+        "ok_message": {
+          "id": "ok_message",
+          "content": {
+            "type": "text",
+            "value": "Ok, I shared everything I had for today. Now you know. I hope you enjoyed this game and maybe it was even a bit useful. Enjoy the rest of the videos and have a good life!"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_166"
+            }
+          ]
+        }
+      }
+    },
+    "level_166": {
+      "initial": "remaining_20",
+      "nodes": {
+        "remaining_20": {
+          "id": "remaining_20",
+          "content": {
+            "type": "text",
+            "value": "Remaining videos: 20"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_167"
+            }
+          ]
+        }
+      }
+    },
+    "level_167": {
+      "initial": "vid_167",
+      "nodes": {
+        "vid_167": {
+          "id": "vid_167",
+          "content": {
+            "type": "text",
+            "value": "Dog does a trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_168"
+            }
+          ]
+        }
+      }
+    },
+    "level_168": {
+      "initial": "vid_168",
+      "nodes": {
+        "vid_168": {
+          "id": "vid_168",
+          "content": {
+            "type": "text",
+            "value": "Life hack you need to know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_169"
+            }
+          ]
+        }
+      }
+    },
+    "level_169": {
+      "initial": "vid_169",
+      "nodes": {
+        "vid_169": {
+          "id": "vid_169",
+          "content": {
+            "type": "text",
+            "value": "Satisfying loop"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_170"
+            }
+          ]
+        }
+      }
+    },
+    "level_170": {
+      "initial": "vid_170",
+      "nodes": {
+        "vid_170": {
+          "id": "vid_170",
+          "content": {
+            "type": "text",
+            "value": "Someone talking about their day"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_171"
+            }
+          ]
+        }
+      }
+    },
+    "level_171": {
+      "initial": "vid_171",
+      "nodes": {
+        "vid_171": {
+          "id": "vid_171",
+          "content": {
+            "type": "text",
+            "value": "5-minute pasta recipe"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_172"
+            }
+          ]
+        }
+      }
+    },
+    "level_172": {
+      "initial": "vid_172",
+      "nodes": {
+        "vid_172": {
+          "id": "vid_172",
+          "content": {
+            "type": "text",
+            "value": "Cute baby animal compilation"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_173"
+            }
+          ]
+        }
+      }
+    },
+    "level_173": {
+      "initial": "vid_173",
+      "nodes": {
+        "vid_173": {
+          "id": "vid_173",
+          "content": {
+            "type": "text",
+            "value": "ASMR triggers for relaxation"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_174"
+            }
+          ]
+        }
+      }
+    },
+    "level_174": {
+      "initial": "vid_174",
+      "nodes": {
+        "vid_174": {
+          "id": "vid_174",
+          "content": {
+            "type": "text",
+            "value": "Unpopular opinion thread"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_175"
+            }
+          ]
+        }
+      }
+    },
+    "level_175": {
+      "initial": "vid_175",
+      "nodes": {
+        "vid_175": {
+          "id": "vid_175",
+          "content": {
+            "type": "text",
+            "value": "Multiple cats together"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_176"
+            }
+          ]
+        }
+      }
+    },
+    "level_176": {
+      "initial": "vid_176",
+      "nodes": {
+        "vid_176": {
+          "id": "vid_176",
+          "content": {
+            "type": "text",
+            "value": "Everyone is doing this"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_177"
+            }
+          ]
+        }
+      }
+    },
+    "level_177": {
+      "initial": "remaining_10",
+      "nodes": {
+        "remaining_10": {
+          "id": "remaining_10",
+          "content": {
+            "type": "text",
+            "value": "Remaining videos: 10"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_178"
+            }
+          ]
+        }
+      }
+    },
+    "level_178": {
+      "initial": "vid_178",
+      "nodes": {
+        "vid_178": {
+          "id": "vid_178",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_179"
+            }
+          ]
+        }
+      }
+    },
+    "level_179": {
+      "initial": "vid_179",
+      "nodes": {
+        "vid_179": {
+          "id": "vid_179",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_180"
+            }
+          ]
+        }
+      }
+    },
+    "level_180": {
+      "initial": "vid_180",
+      "nodes": {
+        "vid_180": {
+          "id": "vid_180",
+          "content": {
+            "type": "text",
+            "value": "Dog does a trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_181"
+            }
+          ]
+        }
+      }
+    },
+    "level_181": {
+      "initial": "vid_181",
+      "nodes": {
+        "vid_181": {
+          "id": "vid_181",
+          "content": {
+            "type": "text",
+            "value": "Funny meme"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_182"
+            }
+          ]
+        }
+      }
+    },
+    "level_182": {
+      "initial": "vid_182",
+      "nodes": {
+        "vid_182": {
+          "id": "vid_182",
+          "content": {
+            "type": "text",
+            "value": "Life hack you need to know"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_183"
+            }
+          ]
+        }
+      }
+    },
+    "level_183": {
+      "initial": "remaining_5",
+      "nodes": {
+        "remaining_5": {
+          "id": "remaining_5",
+          "content": {
+            "type": "text",
+            "value": "Remaining videos: 5"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_184"
+            }
+          ]
+        }
+      }
+    },
+    "level_184": {
+      "initial": "vid_184",
+      "nodes": {
+        "vid_184": {
+          "id": "vid_184",
+          "content": {
+            "type": "text",
+            "value": "Cat video"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_185"
+            }
+          ]
+        }
+      }
+    },
+    "level_185": {
+      "initial": "vid_185",
+      "nodes": {
+        "vid_185": {
+          "id": "vid_185",
+          "content": {
+            "type": "text",
+            "value": "Dance challenge"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_186"
+            }
+          ]
+        }
+      }
+    },
+    "level_186": {
+      "initial": "vid_186",
+      "nodes": {
+        "vid_186": {
+          "id": "vid_186",
+          "content": {
+            "type": "text",
+            "value": "Dog does a trick"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_187"
+            }
+          ]
+        }
+      }
+    },
+    "level_187": {
+      "initial": "vid_187",
+      "nodes": {
+        "vid_187": {
+          "id": "vid_187",
+          "content": {
+            "type": "text",
+            "value": "Funny meme"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_188"
+            }
+          ]
+        }
+      }
+    },
+    "level_188": {
+      "initial": "last_video_prompt",
+      "nodes": {
+        "last_video_prompt": {
+          "id": "last_video_prompt",
+          "content": {
+            "type": "text",
+            "value": "Your last video. Are you ready?"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_189"
+            }
+          ]
+        }
+      }
+    },
+    "level_189": {
+      "initial": "sponsored_final",
+      "nodes": {
+        "sponsored_final": {
+          "id": "sponsored_final",
+          "content": {
+            "type": "text",
+            "value": "Sponsored"
+          },
+          "transitions": [
+            {
+              "event": "swipe_up",
+              "target": "level_190"
+            }
+          ]
+        }
+      }
+    },
+    "level_190": {
+      "initial": "the_end_real",
+      "nodes": {
+        "the_end_real": {
+          "id": "the_end_real",
+          "content": {
+            "type": "text",
+            "value": "THE END (for real). P.S. The cat and dog were not actually killed for this game. They are completely fine, don't worry."
           },
           "transitions": []
         }
